@@ -10,10 +10,13 @@
     display: flex;
     flex-wrap: wrap;
     flex-grow: 0;
+    flex-direction: column;
 }
 
 .first-block {
     background:url(../img/bg.png);
+    display: flex;
+    min-width: 960px;
 }
 
 .navigation {
@@ -111,6 +114,12 @@
     position: absolute;
     top: 5px;
     left: -23px;
+}
+
+.navigation-bar {
+    position: fixed;
+    top: 100px;
+    right: 20px;
 }
 
 
