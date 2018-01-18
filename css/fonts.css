@@ -1,73 +1,50 @@
 
 @font-face {
-    font-family: 'gagalin';
-    src: url('../fonts/Gagalin/gagalin-regular-webfont.woff2') format('woff2'),
-         url('../fonts/Gagalin/gagalin-regular-webfont.woff') format('woff'),
-         url('../fonts/Gagalin/Gagalin-Regular.otf') format('opentype')
-         url('../fonts/Gagalin/gagalin-regular-webfont.ttf') format('truetype');
+    font-family: "gagalin";
+    src: url("../fonts/gagalin/Gagalin-Regular.woff") format("woff"),
+         url("../fonts/gagalin/Gagalin-Regular.woff2") format("woff2");
     font-weight: normal;
     font-style: normal;
-
 }
 
 
 
 
 @font-face {
-    font-family: 'lifehack';
-    src: url('../fonts/lifehack_medium-webfont.woff2') format('woff2'),
-         url('../fonts/lifehack_medium-webfont.woff') format('woff'),
-         url('../fonts/Lifehack Medium.otf') format('opentype')
-         url('../fonts/lifehack_medium-webfont.ttf') format('truetype');
+    font-family: "lifehack";
+    src: url("../fonts/Lifehack_Medium.woff") format("woff"),
+         url("../fonts/Lifehack_Medium.woff2") format("woff2");
     font-weight: normal;
     font-style: normal;
-
 }
 
 
 
 
 @font-face {
-    font-family: "ubuntu", sans-serif;
-    src: url('../fonts/Ubuntu/ubuntu-light-webfont.woff2') format('woff2'),
-         url('../fonts/Ubuntu/ubuntu-light-webfont.woff') format('woff');
+    font-family: "ubuntubold";
+    src: url("../fonts/ubuntu/Ubuntu-B.woff") format("woff"),
+         url("../fonts/ubuntu/Ubuntu-B.woff2") format("woff2");
     font-weight: 200;
     font-style: normal;
-
 }
 
 
 
 
 @font-face {
-    font-family: "ubuntu", sans-serif;
-    src: url('../fonts/Ubuntu/ubuntu-medium-webfont.woff2') format('woff2'),
-         url('../fonts/Ubuntu/ubuntu-medium-webfont.woff') format('woff');
+    font-family: "ubuntumedium";
+    src: url("../fonts/ubuntu/Ubuntu-Medium.woff") format("woff"),
+         url("../fonts/ubuntu/Ubuntu-Medium.woff2") format("woff2");
     font-weight: 500;
     font-style: normal;
-
 }
-
-
-
 
 @font-face {
-    font-family: "ubuntu", sans-serif;
-    src: url('../fonts/Ubuntu/ubuntu-regular-webfont.woff2') format('woff2'),
-         url('../fonts/Ubuntu/ubuntu-regular-webfont.woff') format('woff');
-    font-weight: 400;
+    font-family: "ubunturegular";
+    src: url("../fonts/ubuntu/Ubuntu-Regular.woff") format("woff"),
+        url("../fonts/ubuntu/Ubuntu-Regular.woff2") format("woff2");
+    font-weight: 500;
     font-style: normal;
-
 }
 
-
-
-
-@font-face {
-    font-family: "ubuntu", sans-serif;
-    src: url('../fonts/Ubuntu/ubuntu-b-webfont.woff2') format('woff2'),
-         url('../fonts/Ubuntu/ubuntu-b-webfont.woff') format('woff');
-    font-weight: 700;
-    font-style: normal;
-
-}

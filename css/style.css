@@ -30,7 +30,7 @@
     display: flex;
     justify-content: space-between;
     margin: 13px 0px 0 0px;
-    font-family: ubuntu,sans-serif;
+    font-family: "ubuntumedium";
     font-weight: 500;
     font-style: normal;
     align-items: center;
@@ -78,14 +78,18 @@
 }
 
 .first-block__desc-title {
-    font-family: gagalin;
+    font-family: "gagalin";
     color: #f9b43b;
+    font-weight: normal;
+    font-style: normal;
     font-size: 65px;
     margin: 50px 0 0 0;
 }
 
 .first-block__desc-title-continue {
-    font-family: lifehack;
+    font-family: "lifehack";
+    font-weight: normal;
+    font-style: normal;
     font-size: 65px;
 }
 
@@ -132,7 +136,9 @@
 
 .features-block__title {
     color: #2f3234;
-    font-family: gagalin; 
+    font-family: "gagalin"; 
+    font-weight: normal;
+    font-style: normal;
     font-size: 72px;
     align-self: center;
     margin-bottom: 20px;
@@ -153,7 +159,9 @@
 
 .features-block__item-title {
     color: #2f3234;
-    font-family: lifehack;
+    font-family: "lifehack";
+    font-weight: normal;
+    font-style: normal;
     margin: 30px 0 20px 0;
     font-size: 24px;
 }
@@ -169,7 +177,7 @@
 
 .features-block__item-desc {
     color: #2f3234;
-    font-family: ubuntu, sans-serif;
+    font-family: "ubunturegular";
     font-weight: 200;
     font-style: normal;
     font-size: 14px;
@@ -184,6 +192,7 @@
 .reviews-block__list {
     display: flex;
     flex-wrap: wrap;
+    height: 100%
 }
 
 .reviews-block__item {
@@ -191,7 +200,7 @@
     width: 25%;
     min-width: 275px;
     min-height: 300px;
-    height: 50vh;
+    height: 50%;
     background: url(../img/review.jpg) no-repeat;
     background-size: cover;
     transition: 0.5s all;
@@ -219,14 +228,16 @@
 
 
 .reviews-block__item-name {
-    font-family: gagalin;
+    font-family: "gagalin";
+    font-weight: normal;
+    font-style: normal;
     font-size: 16px;
     margin-left: 25px;
     margin-bottom: 20px;
 }
 
 .reviews-block__item-desc {
-    font-family: ubuntu, sans-serif;
+    font-family: "ubunturegular";
     font-weight: 200;
     margin-left: 25px;
     font-size: 14px;
@@ -242,7 +253,7 @@
     background-color: #2f3234;
     text-transform: uppercase;
     font-weight: 500;
-    font-family: ubuntu, sans-serif;
+    font-family: "ubuntumedium";
     border-radius: 3px;
 }
 
