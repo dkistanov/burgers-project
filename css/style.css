@@ -204,14 +204,13 @@
 
 .reviews-block__item:hover .reviews-block__item-opacity  {
     background:  rgba(0,0,0,0.5);
-    background-image: url(../img/review.jpg);
-    background-repeat: no-repeat;
     background-blend-mode: overlay;
     cursor: pointer;
     background-size: cover;
     opacity: 1;
     transform: translate(5%,5%)
 }
+
 
 .reviews-block__item-name {
     font-family: gagalin;
