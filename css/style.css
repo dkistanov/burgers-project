@@ -21,8 +21,12 @@ body {
     align-items: center;
 }
 
+.container-about {
+    justify-content: space-between;
+}
+
 .first-block {
-    background:url(../img/bgfirst.jpg) no-repeat;
+    background:url(../img/bg/bgfirst.jpg) no-repeat;
     min-width: 940px;
     min-height: 650px;
 }
@@ -82,8 +86,6 @@ body {
 .first-block__desc {
     display: flex;
     align-items: center;
-    position: absolute;
-    top: 20%;
 }
 
 .first-block__desc-title {
@@ -100,6 +102,13 @@ body {
     font-weight: normal;
     font-style: normal;
     font-size: 65px;
+}
+
+.arrow-scroll {
+    margin-bottom: 20px;
+}
+.arrow-scroll:hover {
+    cursor: pointer;
 }
 
 .navigation-bar__item {
@@ -137,7 +146,7 @@ body {
 }
 
 .features-block {
-    background: url(../img/bgfeatures.jpg);
+    background: url(../img/bg/bgfeatures.jpg);
     background-size: cover;
     align-items: center;
     min-width: 940px;
@@ -216,42 +225,42 @@ body {
 }
 
 .review-1 {
-    background: url(../img/reviews-1.png) no-repeat;
+    background: url(../img/content/reviews-1.png) no-repeat;
     background-size: cover;
 }
 
 .review-2 {
-    background: url(../img/reviews-2.png) no-repeat;
+    background: url(../img/content/reviews-2.png) no-repeat;
     background-size: cover;
 }
 
 .review-3 {
-    background: url(../img/reviews-3.png) no-repeat;
+    background: url(../img/content/reviews-3.png) no-repeat;
     background-size: cover;
 }
 
 .review-4 {
-    background: url(../img/reviews-4.png) no-repeat;
+    background: url(../img/content/reviews-4.png) no-repeat;
     background-size: cover;
 }
 
 .review-5 {
-    background: url(../img/reviews-5.png) no-repeat;
+    background: url(../img/content/reviews-5.png) no-repeat;
     background-size: cover;
 }
 
 .review-6 {
-    background: url(../img/reviews-6.png) no-repeat;
+    background: url(../img/content/reviews-6.png) no-repeat;
     background-size: cover;
 }
 
 .review-7 {
-    background: url(../img/reviews-7.png) no-repeat;
+    background: url(../img/content/reviews-7.png) no-repeat;
     background-size: cover;
 }
 
 .review-8 {
-    background: url(../img/reviews-8.png) no-repeat;
+    background: url(../img/content/reviews-8.png) no-repeat;
     background-size: cover;
 }
 
