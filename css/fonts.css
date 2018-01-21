@@ -44,7 +44,15 @@
     font-family: "ubunturegular";
     src: url("../fonts/ubuntu/Ubuntu-Regular.woff") format("woff"),
         url("../fonts/ubuntu/Ubuntu-Regular.woff2") format("woff2");
-    font-weight: 500;
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "ubuntulight";
+    src: url("../fonts/ubuntu/subset-Ubuntu-Light.woff") format("woff"),
+        url("../fonts/ubuntu/subset-Ubuntu-Light.woff2") format("woff2");
+    font-weight: 300;
     font-style: normal;
 }
 

@@ -5,12 +5,8 @@
     padding: 0;
 }
 
-body {
+body,html,main,.wrapper,.container {
     width: 100%;
-    height: 100%;
-}
-
-.wrapper {
     height: 100%;
 }
 
@@ -19,11 +15,18 @@ body {
     flex-direction: column;
     width: 940px;
     align-items: center;
+    justify-content: center;
 }
 
 .container-about {
     justify-content: space-between;
 }
+
+
+
+/* Мы */
+
+
 
 .first-block {
     background:url(../img/bg/bgfirst.jpg) no-repeat;
@@ -34,7 +37,7 @@ body {
 .section {
     justify-content: center;
     display: flex;
-    height: 100vh;
+    height: 100%;
     background-size: cover;
 }
 
@@ -77,6 +80,7 @@ body {
 
 .navigation__buy {
     padding: 10px 10px;
+    font-family: "ubuntumedium";
     outline: none;
     border: 0;
     border-radius: 3px;
@@ -145,6 +149,14 @@ body {
     z-index: 100;
 }
 
+
+
+
+/* О нас */
+
+
+
+
 .features-block {
     background: url(../img/bg/bgfeatures.jpg);
     background-size: cover;
@@ -204,9 +216,12 @@ body {
     line-height: 24px;
 }
 
-.reviews-block {
-    height: 100vh;
-}
+
+
+
+/* Отзывы */
+
+
 
 .reviews-block__list {
     display: flex;
@@ -313,5 +328,122 @@ body {
 }
 
 
+
+
+/* Команда */
+
+
+
+.team-block {
+    background: url(../img/bg/bgteam.jpg);
+    background-size: cover;
+    height: 100%;
+    position: relative;
+}
+
+
+.team-block__overlay {
+    height: 100%;
+    background-color: rgba(51,54,56,0.9);
+    width: 50%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.team-block__content {
+    flex-flow: column nowrap;
+}
+
+.team-block__title {
+    font-family: "gagalin";
+    font-size: 5rem;
+    color: #f9b43b;
+    margin-bottom: 40px;
+}
+
+.team-block__list {
+    list-style: none;
+    margin-left: 1.8rem;
+}
+
+.team-block__item {
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.team-block__item::before {
+    content: "";
+    width: 0;
+    height: 0;
+    border: 0.5rem solid transparent;
+    border-top-color: #f9b43b;  
+    border-bottom: 0;
+    position: absolute;
+    top: 0.4rem;
+    left: -1.8rem;
+    cursor: pointer;
+}
+
+
+.team-block-accordeon_active .team-block__item-name{
+    color: #f9b43b;
+}
+
+.team-block-accordeon_active.team-block__item::before {
+    border: 0.5rem solid transparent;
+    border-bottom-color: #f9b43b;  
+    border-top: 0;
+}
+
+.team-block-accordeon_active .team-block__item-hidden {
+    height: auto;
+}
+
+.team-block__item-hidden {
+    height: 0; 
+    overflow: hidden;
+}
+
+
+.team-block__item-name {
+    font-family: "gagalin";
+    font-size: 1rem;
+    display: block;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.045rem;
+    cursor: pointer;
+}
+
+.team-block__item-desc {
+    font-family: "ubuntulight";
+    width: 360px;
+    line-height: 24px;
+}
+
+.team-block__item-wrapper {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    float: left;
+    position: relative;
+    margin-right: 1rem;
+}
+
+.team-block__item-photo {
+    position: absolute;
+    right: 0;
+    left: -20%;
+}
+
+.team-block__item-profession {
+    font-family: "ubuntubold";
+    margin-bottom: 0.7rem;
+    display: block;
+}
 
 
