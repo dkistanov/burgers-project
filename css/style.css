@@ -238,66 +238,85 @@ h1,h2,h3,h4,h5,h6,p,ul,li {
 
 /* Отзывы */
 
-
+.reviews-block {
+    width: 100%;
+}
 
 .reviews-block__list {
     display: flex;
     flex-wrap: wrap;
-    height: 100%
 }
 
 .reviews-block__item {
     list-style-type: none;
     width: 25%;
-    min-width: 275px;
-    min-height: 300px;
     height: 50%;
     transition: 0.5s all;
-    display: flex;  
+    display: flex; 
+    overflow: hidden;
+    position: relative;    
+}
+
+.reviem-block__item-photo {
+    height: 100%;
+    width: 100%;
+    filter: grayscale(100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background:no-repeat 50%;
 }
 
 .review-1 {
-    background: url(../img/content/reviews-1.png) no-repeat;
+    background-image: url(../img/content/reviews-1.jpg);
     background-size: cover;
 }
 
 .review-2 {
-    background: url(../img/content/reviews-2.png) no-repeat;
+    background-image: url(../img/content/reviews-2.jpg);
     background-size: cover;
+    background-position: -300px;
 }
 
 .review-3 {
-    background: url(../img/content/reviews-3.png) no-repeat;
+    background-image: url(../img/content/reviews-3.jpg);
     background-size: cover;
 }
 
 .review-4 {
-    background: url(../img/content/reviews-4.png) no-repeat;
+    background-image: url(../img/content/reviews-4.jpg);
     background-size: cover;
 }
 
 .review-5 {
-    background: url(../img/content/reviews-5.png) no-repeat;
+    background-image: url(../img/content/reviews-5.jpg);
     background-size: cover;
+    transform: scale(-1, 1);
 }
 
 .review-6 {
-    background: url(../img/content/reviews-6.png) no-repeat;
+    background-image: url(../img/content/reviews-6.jpg);
     background-size: cover;
 }
 
 .review-7 {
-    background: url(../img/content/reviews-7.png) no-repeat;
+    background-image: url(../img/content/reviews-7.jpg);
     background-size: cover;
+    background-position: -100px;
 }
 
 .review-8 {
-    background: url(../img/content/reviews-8.png) no-repeat;
+    background-image: url(../img/content/reviews-8.jpg);
     background-size: cover;
+    transform: scale(-1, 1);
 }
 
 .reviews-block__item-opacity {
     display: flex;
+    height: 100%;
+    width: 100%;    
     justify-content: center;
     align-items: flex-start;
     flex-direction: column;
