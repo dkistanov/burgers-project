@@ -27,6 +27,13 @@ h1,h2,h3,h4,h5,h6,p,ul,li {
     justify-content: space-between;
 }
 
+.section_title {
+    font-family: "gagalin";
+    font-weight: normal;
+    font-style: normal;
+    color: #f9b43b;
+    font-size: 4.5rem;
+}
 
 
 /* Мы */
@@ -97,7 +104,6 @@ h1,h2,h3,h4,h5,h6,p,ul,li {
     outline: none;
     border: 0;
     border-radius: 3px;
-    background-color: #e45028;
     text-transform: uppercase;
 }
 
@@ -112,11 +118,7 @@ h1,h2,h3,h4,h5,h6,p,ul,li {
 }
 
 .first-block__desc-title {
-    font-family: "gagalin";
     color: #f9b43b;
-    font-weight: normal;
-    font-style: normal;
-    font-size: 72px;
 }
 
 .first-block__desc-title-continue {
@@ -167,6 +169,13 @@ h1,h2,h3,h4,h5,h6,p,ul,li {
     z-index: 100;
 }
 
+.button-orange {
+    background-color:#e45028;
+}
+
+.button-orange:hover {
+    background-color: #c1401e;
+}
 
 
 
@@ -183,10 +192,6 @@ h1,h2,h3,h4,h5,h6,p,ul,li {
 
 .features-block__title {
     color: #2f3234;
-    font-family: "gagalin"; 
-    font-weight: normal;
-    font-style: normal;
-    font-size: 72px;
     margin-bottom: 20px;
 }
 
@@ -245,6 +250,8 @@ h1,h2,h3,h4,h5,h6,p,ul,li {
 .reviews-block__list {
     display: flex;
     flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
 }
 
 .reviews-block__item {
@@ -257,7 +264,7 @@ h1,h2,h3,h4,h5,h6,p,ul,li {
     position: relative;    
 }
 
-.reviem-block__item-photo {
+.review-block__item-photo {
     height: 100%;
     width: 100%;
     filter: grayscale(100%);
@@ -293,7 +300,6 @@ h1,h2,h3,h4,h5,h6,p,ul,li {
 .review-5 {
     background-image: url(../img/content/reviews-5.jpg);
     background-size: cover;
-    transform: scale(-1, 1);
 }
 
 .review-6 {
@@ -310,7 +316,6 @@ h1,h2,h3,h4,h5,h6,p,ul,li {
 .review-8 {
     background-image: url(../img/content/reviews-8.jpg);
     background-size: cover;
-    transform: scale(-1, 1);
 }
 
 .reviews-block__item-opacity {
@@ -332,7 +337,6 @@ h1,h2,h3,h4,h5,h6,p,ul,li {
     opacity: 1;
 }
 
-
 .reviews-block__item-name {
     font-family: "gagalin";
     font-weight: normal;
@@ -352,7 +356,7 @@ h1,h2,h3,h4,h5,h6,p,ul,li {
     margin-bottom: 20px;
 }
 
-.reviews-block__item-more {
+.button-gray {
     margin-left: 25px;
     text-decoration: none;
     background-color: #2f3234;
@@ -390,8 +394,6 @@ h1,h2,h3,h4,h5,h6,p,ul,li {
 }
 
 .team-block__title {
-    font-family: "gagalin";
-    font-size: 5rem;
     color: #f9b43b;
     margin-bottom: 40px;
 }
