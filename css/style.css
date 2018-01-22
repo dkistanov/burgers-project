@@ -10,6 +10,11 @@ body,html,main,.wrapper,.container {
     height: 100%;
 }
 
+h1,h2,h3,h4,h5,h6,p,ul,li {
+    padding: 0;
+    margin: 0;
+}
+
 .container {
     display: flex;
     flex-direction: column;
@@ -18,7 +23,7 @@ body,html,main,.wrapper,.container {
     justify-content: center;
 }
 
-.container-about {
+.container_about {
     justify-content: space-between;
 }
 
@@ -30,8 +35,6 @@ body,html,main,.wrapper,.container {
 
 .first-block {
     background:url(../img/bg/bgfirst.jpg) no-repeat;
-    min-width: 940px;
-    min-height: 650px;
 }
 
 .section {
@@ -39,28 +42,37 @@ body,html,main,.wrapper,.container {
     display: flex;
     height: 100%;
     background-size: cover;
+    min-height: 650px;
+}
+
+
+.header {
+    width: 100%;
+    justify-content: space-between;
+    padding-top: 13px;
+    display: flex;
 }
 
 .navigation {
-    width: 920px;
     display: flex;
-    justify-content: space-between;
-    margin: 13px 0px 0 0px;
-    font-family: "ubuntumedium";
-    font-weight: 500;
-    font-style: normal;
     align-items: center;
 }
 
 .navigation__list {
-    margin-left: 100px;
     display: flex;
     align-items: center;
+    margin-right: 1rem;
 }
 
 .navigation__list li {
     list-style-type: none;
     margin-left: 10px;
+}
+
+.navigation__item-link {
+    text-decoration: none;
+    font-family: "ubuntumedium";
+    font-size: 0.8125rem;
 }
 
 .navigation__item::before {
@@ -78,13 +90,15 @@ body,html,main,.wrapper,.container {
     display: none;
 }
 
-.navigation__buy {
-    padding: 10px 10px;
+.button {
+    padding: 0.6rem 0.6rem;
     font-family: "ubuntumedium";
+    font-size: 0.8125rem;
     outline: none;
     border: 0;
     border-radius: 3px;
     background-color: #e45028;
+    text-transform: uppercase;
 }
 
 .first-block__desc {
@@ -92,13 +106,17 @@ body,html,main,.wrapper,.container {
     align-items: center;
 }
 
+.first-block__desc-info {
+    display: flex;
+    flex-direction: column;
+}
+
 .first-block__desc-title {
     font-family: "gagalin";
     color: #f9b43b;
     font-weight: normal;
     font-style: normal;
-    font-size: 65px;
-    margin: 50px 0 0 0;
+    font-size: 72px;
 }
 
 .first-block__desc-title-continue {
@@ -161,8 +179,6 @@ body,html,main,.wrapper,.container {
     background: url(../img/bg/bgfeatures.jpg);
     background-size: cover;
     align-items: center;
-    min-width: 940px;
-    min-height: 650px;
 }
 
 .features-block__title {
@@ -171,19 +187,20 @@ body,html,main,.wrapper,.container {
     font-weight: normal;
     font-style: normal;
     font-size: 72px;
-    align-self: center;
     margin-bottom: 20px;
 }
 
 .features-block__list {
     display: flex;
+    width: 100%;
 }
 
 .features-block__item {
     list-style-type: none;
     display: flex;
     flex-direction: column;
-    flex: 0 0 300px;
+    flex: 0 0 295px;
+    margin-right: 20px;
     align-items: center;
     justify-content: center;
 }
@@ -319,12 +336,7 @@ body,html,main,.wrapper,.container {
 .reviews-block__item-more {
     margin-left: 25px;
     text-decoration: none;
-    padding: 15px 15px;
     background-color: #2f3234;
-    text-transform: uppercase;
-    font-weight: 500;
-    font-family: "ubuntumedium";
-    border-radius: 3px;
 }
 
 
