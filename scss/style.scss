@@ -1,0 +1,500 @@
+//config
+
+@import "config/_variables.scss";
+@import "config/_mixins.scss";
+
+// base
+@import "layout/_base.scss";
+@import "layout/_adjustment.scss";
+
+// section
+@import "section/_hero.scss";
+@import "section/_best.scss";
+@import "section/_menu.scss;";
+
+
+
+
+
+
+// css
+
+* {
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+body,html,main,.wrapper,.container {
+    width: 100%;
+    height: 100%;
+}
+
+h1,h2,h3,h4,h5,h6,p,ul,li {
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 940px;
+    align-items: center;
+    justify-content: center;
+}
+
+.container_about {
+    justify-content: space-between;
+}
+
+.section_title {
+    font-family: "gagalin";
+    font-weight: normal;
+    font-style: normal;
+    color: #f9b43b;
+    font-size: 4.5rem;
+}
+
+
+/* Мы */
+
+
+
+.first-block {
+    background:url(../img/bg/bgfirst.jpg) no-repeat;
+}
+
+.section {
+    justify-content: center;
+    display: flex;
+    height: 100%;
+    background-size: cover;
+    min-height: 650px;
+}
+
+
+.header {
+    width: 100%;
+    justify-content: space-between;
+    padding-top: 13px;
+    display: flex;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+}
+
+.navigation__list {
+    display: flex;
+    align-items: center;
+    margin-right: 1rem;
+}
+
+.navigation__list li {
+    list-style-type: none;
+    margin-left: 10px;
+}
+
+.navigation__item-link {
+    text-decoration: none;
+    font-family: "ubuntumedium";
+    font-size: 0.8125rem;
+}
+
+.navigation__item::before {
+    content: "•";
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.navigation__item:hover,.navigation__buy:hover,.navigation-bar__item:hover {
+    cursor: pointer;
+}
+
+.navigation__item:first-child::before {
+    display: none;
+}
+
+.button {
+    padding: 0.6rem 0.6rem;
+    font-family: "ubuntumedium";
+    font-size: 0.8125rem;
+    outline: none;
+    border: 0;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+.first-block__desc {
+    display: flex;
+    align-items: center;
+}
+
+.first-block__desc-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.first-block__desc-title {
+    color: #f9b43b;
+}
+
+.first-block__desc-title-continue {
+    font-family: "lifehack";
+    font-weight: normal;
+    font-style: normal;
+    font-size: 65px;
+}
+
+.arrow-scroll {
+    margin-bottom: 20px;
+}
+.arrow-scroll:hover {
+    cursor: pointer;
+}
+
+.navigation-bar__item {
+    position: relative;
+    font-size: 20px;
+}
+
+.navigation-bar__item:nth-child(1)::before {
+    content: "";
+    width: 12px;
+    height: 12px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 5px;
+    left: -23px;
+}
+
+.navigation-bar__item:hover::before {
+    content: "";
+    width: 12px;
+    height: 12px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 5px;
+    left: -23px;
+}
+
+.navigation-bar {
+    position: fixed;
+    top: 100px;
+    right: 20px;
+    z-index: 100;
+}
+
+.button-orange {
+    background-color:#e45028;
+}
+
+.button-orange:hover {
+    background-color: #c1401e;
+}
+
+
+
+/* О нас */
+
+
+
+
+.features-block {
+    background: url(../img/bg/bgfeatures.jpg);
+    background-size: cover;
+    align-items: center;
+}
+
+.features-block__title {
+    color: #2f3234;
+    margin-bottom: 20px;
+}
+
+.features-block__list {
+    display: flex;
+    width: 100%;
+}
+
+.features-block__item {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 295px;
+    margin-right: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.features-block__item-title {
+    color: #2f3234;
+    font-family: "lifehack";
+    font-weight: normal;
+    font-style: normal;
+    margin: 30px 0 20px 0;
+    font-size: 24px;
+}
+
+.margin-top {
+    margin-top: 27px;
+}
+
+.margin-bot {
+    margin-bottom: 1px;
+    margin-top: 10px;
+}
+
+.features-block__item-desc {
+    color: #2f3234;
+    font-family: "ubunturegular";
+    font-weight: 200;
+    font-style: normal;
+    font-size: 14px;
+    text-align: center;
+    line-height: 24px;
+}
+
+
+
+
+/* Отзывы */
+
+.reviews-block {
+    width: 100%;
+}
+
+.reviews-block__list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+}
+
+.reviews-block__item {
+    list-style-type: none;
+    width: 25%;
+    height: 50%;
+    transition: 0.5s all;
+    display: flex; 
+    overflow: hidden;
+    position: relative;    
+}
+
+.review-block__item-photo {
+    height: 100%;
+    width: 100%;
+    filter: grayscale(100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background:no-repeat 50%;
+}
+
+.review-1 {
+    background-image: url(../img/content/reviews-1.jpg);
+    background-size: cover;
+}
+
+.review-2 {
+    background-image: url(../img/content/reviews-2.jpg);
+    background-size: cover;
+    background-position: 0;
+}
+
+.review-3 {
+    background-image: url(../img/content/reviews-3.jpg);
+    background-size: cover;
+}
+
+.review-4 {
+    background-image: url(../img/content/reviews-4.jpg);
+    background-size: cover;
+}
+
+.review-5 {
+    background-image: url(../img/content/reviews-5.jpg);
+    background-size: cover;
+}
+
+.review-6 {
+    background-image: url(../img/content/reviews-6.jpg);
+    background-size: cover;
+}
+
+.review-7 {
+    background-image: url(../img/content/reviews-7.jpg);
+    background-size: cover;
+    background-position: -100px;
+}
+
+.review-8 {
+    background-image: url(../img/content/reviews-8.jpg);
+    background-size: cover;
+}
+
+.reviews-block__item-opacity {
+    display: flex;
+    height: 100%;
+    width: 100%;    
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    opacity: 0;
+    transition: 0.5s all;
+}
+
+.reviews-block__item:hover .reviews-block__item-opacity  {
+    background:  rgba(0,0,0,0.5);
+    background-blend-mode: overlay;
+    cursor: pointer;
+    background-size: cover;
+    opacity: 1;
+}
+
+.reviews-block__item-name {
+    font-family: "gagalin";
+    font-weight: normal;
+    font-style: normal;
+    font-size: 16px;
+    margin-left: 25px;
+    margin-bottom: 20px;
+}
+
+.reviews-block__item-desc {
+    font-family: "ubunturegular";
+    font-weight: 200;
+    margin-left: 25px;
+    font-size: 14px;
+    line-height: 24px;
+    width: 90%;
+    margin-bottom: 20px;
+}
+
+.button-gray {
+    margin-left: 25px;
+    text-decoration: none;
+    background-color: #2f3234;
+}
+
+
+
+
+/* Команда */
+
+
+
+.team-block {
+    background: url(../img/bg/bgteam.jpg);
+    background-size: cover;
+    height: 100%;
+    position: relative;
+}
+
+
+.team-block__overlay {
+    height: 100%;
+    background-color: rgba(51,54,56,0.9);
+    width: 50%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.team-block__content {
+    flex-flow: column nowrap;
+}
+
+.team-block__title {
+    color: #f9b43b;
+    margin-bottom: 40px;
+}
+
+.team-block__list {
+    list-style: none;
+    margin-left: 1.8rem;
+}
+
+.team-block__item {
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.team-block__item::before {
+    content: "";
+    width: 0;
+    height: 0;
+    border: 0.5rem solid transparent;
+    border-top-color: #f9b43b;  
+    border-bottom: 0;
+    position: absolute;
+    top: 0.4rem;
+    left: -1.8rem;
+    cursor: pointer;
+}
+
+
+.team-block-accordeon_active .team-block__item-name{
+    color: #f9b43b;
+}
+
+.team-block-accordeon_active.team-block__item::before {
+    border: 0.5rem solid transparent;
+    border-bottom-color: #f9b43b;  
+    border-top: 0;
+}
+
+.team-block-accordeon_active .team-block__item-hidden {
+    height: auto;
+}
+
+.team-block__item-hidden {
+    height: 0; 
+    overflow: hidden;
+}
+
+
+.team-block__item-name {
+    font-family: "gagalin";
+    font-size: 1rem;
+    display: block;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.045rem;
+    cursor: pointer;
+}
+
+.team-block__item-desc {
+    font-family: "ubuntulight";
+    width: 360px;
+    line-height: 24px;
+}
+
+.team-block__item-wrapper {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    float: left;
+    position: relative;
+    margin-right: 1rem;
+}
+
+.team-block__item-photo {
+    position: absolute;
+    right: 0;
+    left: -20%;
+}
+
+.team-block__item-profession {
+    font-family: "ubuntubold";
+    margin-bottom: 0.7rem;
+    display: block;
+}
