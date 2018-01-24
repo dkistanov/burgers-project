@@ -29,12 +29,13 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
   -ms-flex-pack: center;
   justify-content: center; }
 
-.container_about {
+.container_space-between {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
-  justify-content: space-between; }
+  justify-content: space-between; 
+}
 
-.section_title {
+.section__title {
   font-family: "gagalin";
   font-weight: normal;
   font-style: normal;
@@ -130,7 +131,7 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
   -ms-flex-direction: column;
   flex-direction: column; }
 
-.first-block__desc-title {
+.first {
   color: #f9b43b; }
 
 .first-block__desc-title-continue {
@@ -191,13 +192,13 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
   right: 20px;
   z-index: 100; }
 
-.button-orange {
+.button_orange {
   background-color: #e45028;
   -webkit-transition: .5s all;
   -o-transition: .5s all;
   transition: .5s all; }
 
-.button-orange:hover {
+.button_orange:hover {
   background-color: #c1401e; }
 
 /* О нас */
@@ -208,7 +209,7 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
   -ms-flex-align: center;
   align-items: center; }
 
-.features-block__title {
+.features {
   color: #2f3234;
   margin-bottom: 20px; }
 
@@ -353,7 +354,9 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
   opacity: 0;
   -webkit-transition: 0.5s all;
   -o-transition: 0.5s all;
-  transition: 0.5s all; }
+  transition: 0.5s all; 
+  padding-left: 20px;
+}
 
 .reviews-block__item:hover .reviews-block__item-opacity {
   background: rgba(0, 0, 0, 0.5);
@@ -367,20 +370,17 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
   font-weight: normal;
   font-style: normal;
   font-size: 16px;
-  margin-left: 25px;
   margin-bottom: 20px; }
 
 .reviews-block__item-desc {
   font-family: "ubunturegular";
   font-weight: 200;
-  margin-left: 25px;
   font-size: 14px;
   line-height: 24px;
   width: 90%;
   margin-bottom: 20px; }
 
-.button-gray {
-  margin-left: 25px;
+.button_gray {
   text-decoration: none;
   background-color: #2f3234; }
 
@@ -414,7 +414,7 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
   -ms-flex-flow: column nowrap;
   flex-flow: column nowrap; }
 
-.team-block__title {
+.team {
   color: #f9b43b;
   margin-bottom: 40px; }
 
@@ -438,15 +438,15 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
   left: -1.8rem;
   cursor: pointer; }
 
-.team-block-accordeon_active .team-block__item-name {
+.accordeon_active .team-block__item-name {
   color: #f9b43b; }
 
-.team-block-accordeon_active.team-block__item::before {
+.accordeon_active.team-block__item::before {
   border: 0.5rem solid transparent;
   border-bottom-color: #f9b43b;
   border-top: 0; }
 
-.team-block-accordeon_active .team-block__item-hidden {
+.accordeon_active .team-block__item-hidden {
   height: auto; }
 
 .team-block__item-hidden {
@@ -491,7 +491,7 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
   background-size: cover;
   position: relative; }
 
-.menu__title {
+.menu {
   color: #fff;
   position: absolute;
   top: 28%;
@@ -674,7 +674,7 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
   -ms-flex-pack: center;
   justify-content: center; }
 
-.delivery-block__title {
+.delivery {
   margin-bottom: 2rem; }
 
 .delivery-block__form {
@@ -833,13 +833,13 @@ input[type="radio"]:checked + .form__radio-title::after {
 .form__submit {
   margin-right: 1rem; }
 
-.button-yellow {
+.button_yellow {
   background-color: #f9b43b;
   -webkit-transition: .5s all;
   -o-transition: .5s all;
   transition: .5s all; }
 
-.button-yellow:hover {
+.button_yellow:hover {
   background-color: #dda036; }
 
 /*# sourceMappingURL=style.css.map */
