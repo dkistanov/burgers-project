@@ -3,6 +3,7 @@
     color: white;
     margin: 0;
     padding: 0;
+    outline-width: 0px;
 }
 
 body,html,main,.wrapper,.container {
@@ -187,6 +188,7 @@ h1,h2,h3,h4,h5,h6,p,ul,li {
 
 .button-orange {
     background-color:#e45028;
+    transition: .5s all;
 }
 
 .button-orange:hover {
@@ -666,3 +668,181 @@ h1,h2,h3,h4,h5,h6,p,ul,li {
 .footer__socials-link:hover .social__svg {
     fill: #fff;
 }
+
+
+
+/* Доставка */
+
+
+.form__radio-title,.form__checkbox-title,.form__name,.form__submit,.button-yellow {
+    cursor: pointer;
+}
+
+
+.delivery-block {
+    background: url(../img/bg/bgdilevery.jpg) no-repeat;
+    background-size: cover;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.delivery-block__title {
+    margin-bottom: 2rem;
+}
+
+.delivery-block__form {
+    display: flex;
+    justify-content: space-between;
+    width: 100%
+}
+
+.delivery-block__left-content,.delivery-block__right-content {
+    width: 49%;
+    display: flex;
+    flex-flow: row wrap;
+    font-family: "ubuntulight";
+    justify-content: space-between;
+}
+
+.delivery-block__right-content {
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.form__label {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 48%;
+    margin-bottom: 1.5rem;
+}
+
+.form__name {
+    margin-bottom: 0.5rem;
+}
+
+.form__input {
+    width: 100%;
+    height: 2rem;
+    border-radius: 3px;
+    color: black;
+    padding-left: 10px;
+    outline-color: #f9b43b;
+    outline-width: 5px;
+    box-sizing: border-box;
+    border: none;
+}
+
+.full_width {
+    width: 100%;
+}
+
+.house_desc {
+    width: 21%;
+}
+
+.form__textarea {
+    border-radius: 3px;
+    resize: none;
+    width: 100%;
+    height:8.2rem;
+    color: black;
+    padding-left: 10px;
+    padding-top: 10px;   
+    outline-color: #f9b43b;
+    outline-width: 5px;
+    box-sizing: border-box;
+}
+
+.form__checkbox,.form__radio {
+    display: none;
+}
+
+.form__checkbox-title::before {
+    content: "";
+    width: 15px;
+    height: 15px;
+    background-color: #fff;
+    position: absolute;
+    top: 2px;
+    left: 0px;
+}
+
+.form__checkbox-title::after{
+    content: "";
+    width: 15px;
+    height: 15px;
+    background: url(../img/svg/checkbox.svg);  
+    fill: #e45028;
+    position: absolute;
+    top: 2px;
+    left: 0px;
+    opacity: 0;
+    transition: .3s all;
+}
+
+input[type="checkbox"]:checked+.form__checkbox-title::after {
+    opacity: 1;
+}
+
+.form__radio-title::before {
+    content: "";
+    width: 15px;
+    height: 15px;
+    background-color: #fff;
+    position: absolute;
+    top: 2px;
+    left: 0px;
+    border-radius: 50%;
+}
+
+.form__radio-title::after{
+    content: "";
+    width: 7px;
+    height: 7px;
+    background-color: #e45028;
+    position: absolute;
+    top: 6px;
+    left: 4px;
+    border-radius: 50%;
+    opacity: 0;
+    transition: .3s all;
+}
+
+input[type="radio"]:checked+.form__radio-title::after {
+    opacity: 1;
+}
+
+.form__checkbox-title,.form__radio-title {
+    margin-left: 25px;
+}
+
+.form__radio-wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+}
+
+.form__toggle{
+    margin-right: 1rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.form__submit {
+    margin-right: 1rem;
+}
+
+.button-yellow {
+    background-color: #f9b43b;
+    transition: .5s all;
+}
+
+.button-yellow:hover {
+    background-color: #dda036;
+}
+
+
+
+
