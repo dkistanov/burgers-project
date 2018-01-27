@@ -162,7 +162,8 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
   display: flex;
   -webkit-box-align: center;
   -ms-flex-align: center;
-  align-items: center; }
+  align-items: center;
+  width: 100%; }
 
 .first-block__desc-info {
   display: -webkit-box;
@@ -171,7 +172,11 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
-  flex-direction: column; }
+  flex-direction: column;
+  width: 55%; }
+
+.first-block__desc-img {
+  width: 44%; }
 
 .title_orange {
   color: #f9b43b; }
@@ -500,7 +505,10 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
 
 .team-block__list {
   list-style: none;
-  margin-left: 1.8rem; }
+  margin-left: 1.8rem;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 90%; }
 
 .team-block__item {
   margin-bottom: 2rem; }
@@ -550,7 +558,7 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
 
 .team-block__item-desc {
   font-family: "ubuntulight";
-  width: 22.5rem;
+  width: 100%;
   line-height: 1.5rem; }
 
 .team-block__item-left {
@@ -560,6 +568,9 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
   overflow: hidden;
   position: relative;
   margin-right: 1rem; }
+
+.team-block__item-right {
+  width: 80%; }
 
 .team-block__item-photo {
   position: absolute;
@@ -985,12 +996,19 @@ input[type="radio"]:checked + .form__radio-title::after {
 
 @media screen and (max-width: 768px) {
   .first-block__desc-info {
-    margin-left: 1.5625rem;
-    text-align: center; } }
+    margin-left: 0rem;
+    text-align: center;
+    width: 100%; } }
+
+@media screen and (max-width: 768px) {
+  .title_fill_width {
+    margin-left: 0rem;
+    width: 100%; } }
 
 @media screen and (max-width: 768px) {
   .first-block__desc-title-continue {
-    margin-left: 1rem; } }
+    margin-left: 0rem;
+    width: 100%; } }
 
 @media screen and (max-width: 768px) {
   .team-block__overlay {
@@ -1052,7 +1070,8 @@ input[type="radio"]:checked + .form__radio-title::after {
     -webkit-box-direction: normal;
     -ms-flex-flow: column;
     flex-flow: column;
-    text-align: center; } }
+    text-align: center;
+    width: 65%; } }
 
 @media screen and (max-width: 768px) {
   .team-block__item-left {
