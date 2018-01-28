@@ -679,7 +679,7 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
   transition: 1s all; }
 
 .menu-block__item:active .menu-block__visible {
-  width: rem(500px);
+  width: rem(800px);
   opacity: 1; }
 
 
@@ -997,6 +997,12 @@ html {
 }
 
 
+.section {
+  @include tablets {
+    min-width: 390px;
+  }
+}
+
 .container{
   @media screen and (max-width: 970px) {
     padding: 10px 10px;
@@ -1025,7 +1031,7 @@ html {
 .first-block__desc-img {
   @include tablets {
     margin-bottom: 2rem;
-    width: rem(450px)
+    width: rem(350px);
   }
 }
 
@@ -1047,7 +1053,14 @@ html {
 .first-block__desc-title-continue {
   @include tablets {
     margin-left: 0rem;
-    width: 100%
+    width: 100%;
+    padding-left: 0.6rem;
+  }
+}
+
+.arrow-scroll {
+  @include tablets {
+    margin-bottom: 0;
   }
 }
 
@@ -1056,6 +1069,7 @@ html {
     width: 100%;
   }
 }
+
 
 .team-block__list {
   @include tablets {
@@ -1105,12 +1119,16 @@ html {
   }
 }
 
+.menu-block__item:active .menu-block__visible{
+  @include tablets {
+    width: rem(350px);
+  }
+}
 
 .reviews-block__item {
   @include tablets {
     width: 50%;
     height: 25%;
-    min-height: 170px;
   }
 }
 
@@ -1127,12 +1145,34 @@ html {
   }
 }
 
+.reviews-block__item-name {
+  @include tablets {
+    margin-bottom: 0.6rem;
+  }
+}
+
+.reviews-block__item-desc {
+  @include tablets {
+    margin-bottom: 0.6rem;
+    height: rem(100px);
+    overflow: hidden;
+  }
+}
+
 .delivery-block__form {
   @include tablets {
     flex-direction: column;
     align-items: center;
+    font-size: rem(12px);
   }
 }
+
+.form__label {
+  @include tablets {
+    margin-bottom: 0.9rem;
+  }
+}
+
 
 /* phones */
 
@@ -1256,6 +1296,13 @@ html {
 }
 
 .footer__socials {
+  @include phones {
+    text-align: center;
+  }
+}
+
+
+.footer__address {
   @include phones {
     text-align: center;
   }
