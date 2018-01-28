@@ -1111,6 +1111,11 @@ input[type="radio"]:checked + .form__radio-title::after {
   .reviews-block__item-name {
     margin-bottom: 0.6rem; } }
 
+@media screen and (max-width: 870px) {
+  .reviews-block__item-desc {
+    height: 11.875rem;
+    overflow: hidden; } }
+
 @media screen and (max-width: 768px) {
   .reviews-block__item-desc {
     margin-bottom: 0.6rem;

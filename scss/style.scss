@@ -1152,6 +1152,10 @@ html {
 }
 
 .reviews-block__item-desc {
+  @media screen and (max-width: 870px) {
+    height: rem(190px);
+    overflow: hidden;
+  }
   @include tablets {
     margin-bottom: 0.6rem;
     height: rem(100px);
