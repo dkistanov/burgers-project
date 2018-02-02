@@ -560,8 +560,8 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
   line-height: rem(24px); }
 
 .team-block__item-left {
-  width: 100px;
-  height: 100px;
+  width: rem(100px);
+  height: rem(100px);
   border-radius: 50%;
   overflow: hidden;
   position: relative;
@@ -573,8 +573,8 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
 
 .team-block__item-photo {
   position: absolute;
-  right: 0;
-  left: -20%; }
+  right: -31%;
+}
 
 .team-block__item-profession {
   font-family: "ubuntubold";
@@ -899,22 +899,22 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
 
 .form__checkbox-title::before {
   content: "";
-  width: 15px;
-  height: 15px;
+  width: rem(15px);
+  height: rem(15px);
   background-color: #fff;
   position: absolute;
-  top: 2px;
+  top: rem(2px);
   left: 0px; }
 
 .form__checkbox-title::after {
   content: "";
-  width: 15px;
-  height: 15px;
+  width: rem(15px);
+  height: rem(15px);
   background: url(../img/svg/checkbox.svg);
   fill: #e45028;
   position: absolute;
-  top: 2px;
-  left: 0px;
+  top: rem(2px);
+  left: rem(0px);
   opacity: 0;
   -webkit-transition: .3s all;
   -o-transition: .3s all;
@@ -925,22 +925,22 @@ input[type="checkbox"]:checked + .form__checkbox-title::after {
 
 .form__radio-title::before {
   content: "";
-  width: 15px;
-  height: 15px;
+  width: rem(15px);
+  height: rem(15px);
   background-color: #fff;
   position: absolute;
-  top: 2px;
+  top: rem(2px);
   left: 0px;
   border-radius: 50%; }
 
 .form__radio-title::after {
   content: "";
-  width: 7px;
-  height: 7px;
+  width: rem(7px);
+  height: rem(7px);
   background-color: #e45028;
   position: absolute;
-  top: 6px;
-  left: 4px;
+  top: rem(6px);
+  left: rem(4px);
   border-radius: 50%;
   opacity: 0;
   -webkit-transition: .3s all;
@@ -1142,6 +1142,12 @@ html {
   }
 }
 
+.header {
+  @include tablets {
+    padding: 0;
+  }
+}
+
 .navigation-bar {
   @include tablets {
     display: none;
@@ -1176,7 +1182,7 @@ html {
 .first-block__desc-img {
   @include tablets {
     margin-bottom: 2rem;
-    width: rem(350px);
+    width: rem(300px);
   }
 }
 
@@ -1188,10 +1194,16 @@ html {
   }
 }
 
-.title_fill_width {
+.title_full_width {
   @include tablets {
     margin-left: 0rem;
     width: 100%
+  }
+}
+
+.section__title {
+  @include tablets {
+    font-size: 3.5rem;
   }
 }
 
@@ -1200,6 +1212,7 @@ html {
     margin-left: 0rem;
     width: 100%;
     padding-left: 0.6rem;
+    font-size: 2.5rem;
   }
 }
 
@@ -1214,7 +1227,6 @@ html {
     width: 100%;
   }
 }
-
 
 .team-block__list {
   @include tablets {
@@ -1292,7 +1304,7 @@ html {
 
 .reviews-block__item-name {
   @include tablets {
-    margin-bottom: 0.6rem;
+    margin-bottom: 0.4rem;
   }
 }
 
@@ -1302,8 +1314,8 @@ html {
     overflow: hidden;
   }
   @include tablets {
-    margin-bottom: 0.6rem;
-    height: rem(100px);
+    margin-bottom: 0.4rem;
+    height: rem(70px);
     overflow: hidden;
   }
 }
@@ -1353,12 +1365,21 @@ html {
 .features-block__item-title,.features-block__item-desc {
   @include phones {
    text-align: left;
+   font-size: 0.8rem;
+   line-height: rem(20px);
+   margin-bottom: rem(8px);
+  }
+}
+
+.features-block__item-title {
+  @include phones {
+    font-size: 1.2rem;
   }
 }
 
 .team-block__item-name {
   @include phones {
-    font-size: 2rem;
+    font-size: 1.2rem;
   }
 }
 
@@ -1367,6 +1388,7 @@ html {
     top: 50%;
   }
 }
+
 
 .reviews-block__item-desc,.button_phones_delete {
   @include phones {
@@ -1398,9 +1420,22 @@ html {
   }
 }
 
+.form__checkbox-title::after {
+  @include phones {
+    top: -1px;
+    left: -1px
+  }
+}
+
 .floor_phones_delete {
   @include phones {
     display: none;
+  }
+}
+
+.form__textarea {
+  @include phones {
+    height: 4rem;
   }
 }
 
@@ -1457,123 +1492,152 @@ html {
   }
 }
 
-
-.catalog__content {
-  @include tablets {
+@media screen and (max-width: 768px) {
+  .catalog__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
-    text-align: center;
-  }
-}
+    text-align: center; } }
 
-.catalog__arrow {
-  @include tablets {
-    margin: 0 45px ;
-  }
-}
+@media screen and (max-width: 768px) {
+  .catalog__arrow {
+    margin: 0 rem(45px); } }
 
-.catalog__content-left,.catalog__content-right {
-  @include tablets {
+@media screen and (max-width: 768px) {
+  .catalog__content-left, .catalog__content-right {
     width: 100%;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
-    margin-left: 0;
-  }
-}
+    margin-right: 0; } }
 
 .catalog__content-left {
   @include tablets {
-    justify-content: flex-end;
-    margin-bottom: rem(30px);
+    height: 60%
   }
 }
 
 .catalog__content-right {
   @include tablets {
-    justify-content: flex-start;
+    height: 40%
   }
 }
 
-.catalog__content-left__composition {
-  @include tablets {
-    top: -90px;
-    left: -20px;
-  }
-}
-
-.catalog__content-left__kkal-wrapper {
-  @include tablets {
-    align-self: flex-start;
-    flex-grow: 0;
-  }
-}
-
-.catalog__content-left__kkal {
-  @include tablets {
-    left: 350px;
-    bottom: 290px;
-  }
-}
-
-.catalog__content-right__buy {
-  @include tablets {
-    width: auto;
-  }
-}
-
+@media screen and (max-width: 768px) {
+  .catalog__content-left {
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    margin-bottom: 1.875rem; } }
 
 .catalog__content-left__burger-wrapper {
-  @include phones {
-    width: 350px;
-    height: 250px;  
+  @include tablets {
+    width: rem(300px);
+    height: rem(220px);
   }
 }
 
-.catalog__content-left__composition {
-  @include phones {
-    left: -40px;
-    top: -110px;
+@media screen and (max-width: 768px) {
+  .catalog__content-right {
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start; } }
+
+.catalog__content-right__title {
+  @include tablets {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
   }
 }
 
-.catalog__content-left__composition-icon {
-  @include phones {
-    width: 50px;
-    height: 45px;
+.catalog__content-right__desc {
+  @include tablets {
+    font-size: 0.8rem;
+    margin-bottom: 1.5rem;
   }
 }
 
-.catalog__content-left__composition-name {
-  @include phones {
-    font-size: 14px;
+.catalog__content-right__buy-button {
+  @include tablets {
+    font-size: 0.7rem;
+  }
+}
+
+.catalog__content-right__buy-price {
+  @include tablets {
+    font-size: 3rem;
+  }
+}
+.catalog__content-right__buy-currency {
+  @include tablets {
+    font-size: 1.2rem;
   }
 }
 
 
-.catalog__content-left__kkal {
-  @include phones {
-    left: 330px;
-    bottom: 280px;
+
+@media screen and (max-width: 768px) {
+  .catalog__content-left__composition {
+    top: rem(-110px);
+    left: rem(-20px); } }
+
+@media screen and (max-width: 768px) {
+  .catalog__content-left__kkal-wrapper {
+    -ms-flex-item-align: start;
+    align-self: flex-start;
+    -webkit-box-flex: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0; } }
+
+@media screen and (max-width: 768px) {
+  .catalog__content-left__kkal {
+    left: rem(250px);
+    bottom: rem(245px); } }
+
+@media screen and (max-width: 768px) {
+  .catalog__content-right__buy {
+    width: auto;
+  } }
+
+@media screen and (max-width: 480px) {
+  .catalog__content-left__composition {
+    left: rem(-40px);
+    top: rem(-110px); } }
+
+@media screen and (max-width: 480px) {
+  .catalog__content-left__composition-icon {
+    width: rem(50px);
+    height: rem(45px); } }
+
+@media screen and (max-width: 480px) {
+  .catalog__content-left__composition-name {
+    font-size: rem(14px); } }
+
+@media screen and (max-width: 480px) {
+  .catalog__content-left__kkal {
+    left: rem(270px);
+    bottom: rem(240px);
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
-    flex-grow: 1;
-  }
-}
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1; } }
 
-.catalog__content-left__kkal-icon {
-  @include phones {
-    width: 70px;
-    height: 60px;
-  }
-}
+@media screen and (max-width: 480px) {
+  .catalog__content-left__kkal-icon {
+    width: rem(70px);
+    height: rem(60px); } }
 
-.catalog__content-left__kkal-quantity {
-  @include phones {
-    font-size: 14px;
-  }
-}
+@media screen and (max-width: 480px) {
+  .catalog__content-left__kkal-quantity {
+    font-size: rem(14px); } }
 
-.catalog__arrow {
-  @include phones {
-    margin: 0;
-  }
-}
+@media screen and (max-width: 480px) {
+  .catalog__arrow {
+    margin: 0; } }
 /* Adaptive end */
