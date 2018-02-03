@@ -91,7 +91,6 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
   position: absolute;
   background-color: #2f3234;
   width: 100%;
-  opacity: 0.99;
   display: flex;
   flex-flow: nowrap column;
   align-items: flex-start;
@@ -99,6 +98,9 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
   box-sizing: border-box;
   z-index: 10;
   min-height: rem(650px);
+  left: -100%;
+  opacity: 0;
+  transition: opacity 1s ;
 }
 
 .header-telephone {
@@ -200,7 +202,8 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-right: 1rem; }
+  margin-right: 1rem;
+}
 
 .navigation__list li {
   list-style-type: none;
@@ -311,7 +314,8 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
   font-size: rem(65px); }
 
 .arrow-scroll {
-  margin-bottom: rem(20px); }
+  margin-bottom: rem(20px);
+}
 
 .arrow-scroll:hover {
   cursor: pointer; }
@@ -1101,6 +1105,7 @@ input[type="radio"]:checked + .form__radio-title::after {
 
 .catalog__arrow-img {
   fill: #fff;
+  cursor: pointer;
 }
 
 .next {
@@ -1112,9 +1117,28 @@ input[type="radio"]:checked + .form__radio-title::after {
   margin-right: rem(10px);
 }
 
+.slider {
+  flex-flow: row;
+  flex-shrink: 0;
+  flex-grow: 0;
+  justify-content: flex-start;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  position: relative;
+  transition: all .5s;
+}
+
+.slider-container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
 .catalog__content {
   display: flex;
   height: 100%;
+  min-width: 100%;
 }
 
 .catalog__content-left,.catalog__content-right {
@@ -1151,6 +1175,7 @@ input[type="radio"]:checked + .form__radio-title::after {
 .catalog__arrow-img {
   width: rem(30px);
   height: 30px;
+  z-index: 300;
 }
 
 .catalog__content-left__composition {
@@ -1266,8 +1291,14 @@ html {
 
 .container{
   @media screen and (max-width: 970px) {
-    padding: 10px 10px;
+    padding: rem(10px) rem(10px);
     box-sizing: border-box;
+  }
+}
+
+.header__logo {
+  @include tablets {
+    padding: rem(10px) 0 0 rem(10px);
   }
 }
 
@@ -1640,6 +1671,12 @@ html {
 .catalog__content-left {
   @include tablets {
     height: 60%
+  }
+}
+
+.slider-container {
+  @include tablets {
+    width: rem(400px);
   }
 }
 
