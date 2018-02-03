@@ -98,6 +98,7 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
   padding: rem(20px);
   box-sizing: border-box;
   z-index: 10;
+  min-height: rem(650px);
 }
 
 .header-telephone {
@@ -1279,6 +1280,18 @@ html {
 .navigation__list li {
   @include tablets {
     display: none;
+  }
+}
+
+.navigation__item-link-telephone {
+  @include tablets {
+  text-decoration: none;
+  font-family: "ubuntulight";
+  font-size: 1.2rem;
+  line-height: 1.2rem; }
+  @include phones {
+  font-size: 1rem;
+  line-height: 0.5rem;
   }
 }
 
