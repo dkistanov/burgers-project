@@ -12,7 +12,8 @@
 
 body, html, main, .wrapper, .container {
   width: 100%;
-  height: 100%; }
+  height: 100%;
+}
 
 h1, h2, h3, h4, h5, h6, p, ul, li {
   padding: 0;
@@ -83,6 +84,114 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
   -ms-flex-align: center;
   align-items: center; }
 
+
+  /* Telephone navigation */
+.navigation__menu-active__telephone {
+  height: 100vh;
+  position: absolute;
+  background-color: #2f3234;
+  width: 100%;
+  opacity: 0.99;
+  display: flex;
+  flex-flow: nowrap column;
+  align-items: flex-start;
+  padding: rem(20px);
+  box-sizing: border-box;
+  z-index: 10;
+}
+
+.header-telephone {
+  display: flex;
+  width: 100%;
+}
+
+.header__logo-telephone {
+  width: 50%;
+}
+
+.navigation__exit-telephone__wrapper {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.navigation__exit-telephone {
+  width: rem(25px);
+  height: rem(32px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-right: 1.5625rem;
+  transform: rotate(45deg)
+}
+
+.navigation__exit-telephone:hover {
+  cursor: pointer; }
+
+.navigation__exit-telephone__content {
+  width: rem(25px);
+  height: rem(4px);
+  border-radius: 3px;
+  background-color: #c1c2c2;
+  position: relative; }
+
+.navigation__exit-telephone__content::before {
+  content: "";
+  width: rem(25px);
+  height: rem(4px);
+  border-radius: 3px;
+  background-color: #c1c2c2;
+  position: absolute;
+  transform: rotate(-90deg)
+}
+
+.navigation-telephone {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.navigation__item-telephone {
+  margin-bottom: rem(30px);
+  text-align: center;
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.navigation__item-link-telephone {
+  text-decoration: none;
+  font-family: "ubuntulight";
+  font-size: 1.5rem;
+  line-height: 2.5rem; }
+
+.navigation__item-telephone::before {
+  content: "•";
+  width: 1.25rem;
+  height: 1.25rem;
+  font-size: rem(20px);
+  margin-bottom:rem(30px);
+ }
+
+.navigation__item-telephone:first-child::before {
+  display: none;
+ }
+
+
+
+/* Telephone navigation end*/
 .navigation__list {
   display: -webkit-box;
   display: -ms-flexbox;
