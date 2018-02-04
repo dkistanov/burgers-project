@@ -771,23 +771,23 @@ const right = document.querySelector(".next");
 const items = document.querySelector(".slider");
 
 const minRight = 0;
-const maxRight = 1880;
-const step = 940;
+const maxRight = 200;
+const step = 100;
 let currentRight = 0;
 
-items.style.right = 0 + "px";
+items.style.right = 0 + "%";
 
 right.addEventListener("click", function() {
   if (currentRight < maxRight) {
     currentRight += step;
-    items.style.right = currentRight + "px";
+    items.style.right = currentRight + "%";
   }
 });
 
 left.addEventListener("click", function() {
   if (currentRight > minRight) {
     currentRight -= step;
-    items.style.right = currentRight + "px";
+    items.style.right = currentRight + "%";
   }
 }); 
     </script>
