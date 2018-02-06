@@ -331,9 +331,9 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="team-block__item accordeon_active">
+                            <li class="team-block__item">
                                 <div class="team-block__name-wrapper ">
-                                    <span class="team-block__item-name accordeon_active">Дэниэл Редклиф</span>
+                                    <span class="team-block__item-name">Дэниэл Редклиф</span>
                                 </div>
                                 <div class="team-block__item-hidden ">
                                     <div class="team-block__item-left">
@@ -412,7 +412,7 @@
                             <div class="menu-block__item-title" style="background-image: url(img/content/menu-vega.jpg); background-position:58%;">
                                 <h3 class="menu-block__item-rotate">Вегетарианское</h3>
                             </div>
-                            <div class="menu-block__item-wrapper menu-block__visible">
+                            <div class="menu-block__item-wrapper">
                                 <p class="menu-block__desc">
                                     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem dolorum eum odit itaque sit ea maxime reprehenderit incidunt
                                     sapiente corrupti molestiae porro, minima aspernatur expedita ut reiciendis ipsam nobis
@@ -790,6 +790,45 @@ left.addEventListener("click", function() {
     items.style.right = currentRight + "%";
   }
 }); 
+
+
+const team = document.querySelectorAll(".team-block__item-name");
+const teamAcc = document.querySelectorAll(".team-block__item");
+
+// for (var i=0; i<4; i++) {
+//     team[i].addEventListener("click",function(i) {
+//         teamAcc[i].classList.toggle("accordeon_active")
+// })
+// }
+
+team[0].addEventListener("click",function(i) {
+        teamAcc[0].classList.toggle("accordeon_active")
+})
+team[1].addEventListener("click",function(i) {
+        teamAcc[1].classList.toggle("accordeon_active")
+})
+team[2].addEventListener("click",function(i) {
+        teamAcc[2].classList.toggle("accordeon_active")
+})
+team[3].addEventListener("click",function(i) {
+        teamAcc[3].classList.toggle("accordeon_active")
+})
+
+
+const menuAcc = document.querySelectorAll(".menu-block__item-wrapper");
+const menuItem = document.querySelectorAll(".menu-block__item");
+
+menuItem[0].addEventListener("click",function(i) {
+        menuAcc[0].classList.toggle("menu-block__visible")
+});
+menuItem[1].addEventListener("click",function(i) {
+        menuAcc[1].classList.toggle("menu-block__visible")
+});
+menuItem[2].addEventListener("click",function(i) {
+        menuAcc[2].classList.toggle("menu-block__visible")
+});
+
+
     </script>
 </body>
 </html>

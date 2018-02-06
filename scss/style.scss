@@ -626,6 +626,7 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
 
 .team-block__item {
   margin-bottom: 2rem;
+  transition: .5s all;
 }
 
 .team-block__item-name::before {
@@ -638,24 +639,34 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
   position: absolute;
   top: 0.4rem;
   left: -1.8rem;
-  cursor: pointer; }
+  cursor: pointer;
+  transition: .5s all;
+
+}
 
 
 .accordeon_active .team-block__item-name {
-  color: #f9b43b; }
+  color: #f9b43b;
+  transition: .5s all; }
 
-.accordeon_active.team-block__item-name::before {
-  transform: rotate(180deg)  ; 
+.accordeon_active .team-block__name-wrapper .team-block__item-name::before {
+  transform: rotate(180deg)  ;
+  transition: .5s all;
 }
 
 .accordeon_active .team-block__item-hidden {
-  height: auto; }
+  height: 100px;
+  @include tablets {
+    height: 160px;
+  }
+}
 
 .team-block__item-hidden {
   height: 0;
   overflow: hidden;
   display: flex;
-  flex-flow: row nowrap;  
+  flex-flow: row nowrap; 
+  transition: .5s all; 
 }
 
 .team-block__item-name {
@@ -666,6 +677,7 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
   letter-spacing: 0.045rem;
   cursor: pointer; 
   position: relative;
+  transition: .5s all;
 }
 
 .team-block__item-desc {
@@ -782,22 +794,24 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
 .menu-block__item-wrapper {
   background-color: rgba(56, 60, 62, 0.93);
   width: 0;
+  opacity: 0;
+  transition: 1s all;
   overflow: hidden; }
 
 .menu-block__desc {
-  padding: rem(60px) 0 0 rem(30px);
-  font-family: "ubuntulight"; }
+  padding: rem(60px) 0 0 rem(20px);
+  font-family: "ubuntulight";
+  height: rem(250px);
+  overflow: hidden;
+ }
 
 .menu-block__visible {
-  width: 0;
-  opacity: 0;
+  width: rem(800px);
+  opacity: 1;
   -webkit-transition: 1s all;
   -o-transition: 1s all;
   transition: 1s all; }
 
-.menu-block__item:active .menu-block__visible {
-  width: rem(800px);
-  opacity: 1; }
 
 
 
