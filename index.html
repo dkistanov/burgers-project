@@ -638,7 +638,7 @@
                             </label>
                             <label for="tel" class="form__label">
                                 <span class="form__name">Телефон</span>
-                                <input type="text" class="form__input" placeholder="+71234567890" name="tel" id="tel">
+                                <input type="text" class="form__input" placeholder="+7(123)456-78-90" name="tel" id="tel" maxlength="16">
                             </label>
                             <label for="street" class="form__label full_width">
                                 <span class="form__name">Улица</span>
@@ -650,15 +650,15 @@
                             </label>
                             <label for="housing" class="form__label house_desc">
                                 <span class="form__name">Корпус</span>
-                                <input type="text" class="form__input" placeholder="2" name="housing" id="housing">
+                                <input type="text" class="form__input" placeholder="2" name="housing" id="housing" maxlength="2">
                             </label>
                             <label for="apartment" class="form__label house_desc">
                                 <span class="form__name">Квартира</span>
-                                <input type="text" class="form__input" placeholder="321" name="apartment" id="apartment">
+                                <input type="text" class="form__input" placeholder="321" name="apartment" id="apartment" maxlength="3">
                             </label>
                             <label for="floor" class="form__label house_desc floor_phones_delete">
                                 <span class="form__name">Этаж</span>
-                                <input type="text" class="form__input" placeholder="4" name="floor" id="floor">
+                                <input type="text" class="form__input" placeholder="4" name="floor" id="floor" maxlength="2">
                             </label>
                         </div>
                         <div class="delivery-block__right-content">
@@ -681,7 +681,7 @@
                                 <span class="form__checkbox-title">Не перезванивать</span>
                             </label>
                             <label for="">
-                                <input type="submit" class="button button_orange form__submit">
+                                <input type="submit" class="button button_orange form__submit" value="ОТПРАВИТЬ">
                                 <button type="button" onclick="form.reset()" class="button button_yellow">Очистить</button>
                             </label>
                         </div>
@@ -826,6 +826,69 @@ menuItem[1].addEventListener("click",function(i) {
 });
 menuItem[2].addEventListener("click",function(i) {
         menuAcc[2].classList.toggle("menu-block__visible")
+});
+
+let inp = document.querySelector('#tel');
+let floor = document.querySelector('#floor')
+let housing = document.querySelector('#housing')
+let apartment = document.querySelector('#apartment')
+
+// Проверяем фокус
+inp.addEventListener('focus', _ => {
+  // Если там ничего нет или есть, но левое
+  if(!/^\+\d*$/.test(inp.value))
+    // То вставляем знак плюса как значение
+    inp.value = '+7(';
+});
+
+inp.addEventListener('keydown', function(event) {
+    isDigit = false;
+    isDash = false;
+    isControl = false;
+    if (event.key>=0 || event.key<=9) {
+        isDigit = true;
+    };
+
+    if (event.key == '-' || event.key == '+' || event.key == '(' || event.key == ')') {
+        isDash = true;
+    };
+
+    if (event.key == 'ArrowLeft' || event.key == 'ArrowRight' || event.key == 'Backspace') {
+        isControl = true;
+    };
+
+    if (isControl == false && isDash == false && isDigit == false) {
+        event.preventDefault();
+    };
+});
+
+floor.addEventListener('keydown', function(event){
+    isDigit = false;
+    if (event.key>=0 || event.key<=9) {
+        isDigit = true;
+    };
+    if (isDigit == false) {
+        event.preventDefault();
+    };
+});
+housing.addEventListener('keydown', function(event){
+    isDigit = false;
+    if (event.key>=0 || event.key<=9) {
+        isDigit = true;
+    };
+    if (isDigit == false) {
+        event.preventDefault();
+    };
+});
+
+apartment.addEventListener('keydown', function(event){
+    isDigit = false;
+    if (event.key>=0 || event.key<=9) {
+        isDigit = true;
+    };
+    if (isDigit == false) {
+        event.preventDefault();
+    };
 });
 
 
