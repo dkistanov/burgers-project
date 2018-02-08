@@ -448,7 +448,73 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
 
 /* Отзывы */
 .reviews-block {
-  width: 100%; }
+  width: 100%;
+  position: relative;
+}
+
+.reviews-block__modal {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.reviews-block__modal-content {
+  width: rem(450px);  
+  background: #fff;
+  border-radius: 4px;
+  box-sizing: border-box;
+  padding: 1rem;
+  position: relative;
+}
+
+.reviews-block__modal-name {
+  color: #000;
+  margin-bottom: 1rem;
+  display: block;
+  font-family: "gagalin";
+  line-height: rem(28px);
+  font-size: rem(14px)
+}
+
+.reviews-block__modal-name::after {
+  content: "";
+  width: rem(20px);
+  height: rem(4px);
+  border-radius: 3px;
+  background-color: #ec8468;
+  position: absolute;
+  right: 1rem;
+  top: 1.5rem;
+  transform: rotate(45deg);
+  cursor: pointer;
+}
+
+.reviews-block__modal-name::before {
+  content: "";
+  width: rem(20px);
+  height:rem( 4px);
+  border-radius: 3px;
+  background-color: #ec8468;
+  position: absolute;
+  right: 1rem;
+  top: 1.5rem;
+  transform: rotate(135deg);
+  cursor: pointer;
+}
+
+.reviews-block__modal-text {
+  color: #000;
+  font-family: "ubuntulight";
+  line-height: rem(24px);
+  font-size: rem(14px)
+}
 
 .reviews-block__list {
   display: -webkit-box;
