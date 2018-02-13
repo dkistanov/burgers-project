@@ -356,6 +356,21 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
   height: 20px;
   display: block; }
 
+.navigation-bar__item:before {
+  -webkit-transition: .3s all;
+  -o-transition: .3s all;
+  transition: .3s all;
+  content: "";
+  width: 10px;
+  height: 10px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 6px;
+  left: -2px;
+  opacity: 0;
+}
+
 .navigation-bar__item.active::before {
   -webkit-transition: .3s all;
   -o-transition: .3s all;
@@ -368,6 +383,21 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
   position: absolute;
   top: 6px;
   left: -2px;
+  opacity: 1;
+}
+.navigation-bar__item:hover:before {
+  -webkit-transition: .3s all;
+  -o-transition: .3s all;
+  transition: .3s all;
+  content: "";
+  width: 10px;
+  height: 10px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 6px;
+  left: -2px;
+  opacity: 1;
 }
 
 
