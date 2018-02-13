@@ -15,7 +15,7 @@
 <body>
     <div class="wrapper">
         <main class="main">
-            <section class="first-block section">
+            <section class="first-block section active">
                 <div class="navigation__menu-active__telephone">
                     <div class="header-telephone">
                         <a href="#" class="header__logo-telephone">
@@ -29,22 +29,22 @@
                     </div>
                     <nav class="navigation-telephone">
                         <ul class="navigation__list-telephone">
-                            <li class="navigation__item-telephone">
+                            <li class="navigation__item-telephone" data-scroll-to="1">
                                 <a href="#" class="navigation__item-link-telephone">О НАС</a>
                             </li>
-                            <li class="navigation__item-telephone">
+                            <li class="navigation__item-telephone" data-scroll-to="2">
                                 <a href="#" class="navigation__item-link-telephone">БУРГЕРЫ</a>
                             </li>
-                            <li class="navigation__item-telephone">
+                            <li class="navigation__item-telephone" data-scroll-to="3">
                                 <a href="#" class="navigation__item-link-telephone">КОМАНДА</a>
                             </li>
-                            <li class="navigation__item-telephone">
+                            <li class="navigation__item-telephone" data-scroll-to="4">
                                 <a href="#" class="navigation__item-link-telephone">МЕНЮ</a>
                             </li>
-                            <li class="navigation__item-telephone">
+                            <li class="navigation__item-telephone" data-scroll-to="5">
                                 <a href="#" class="navigation__item-link-telephone">ОТЗЫВЫ</a>
                             </li>
-                            <li class="navigation__item-telephone">
+                            <li class="navigation__item-telephone" data-scroll-to="7">
                                 <a href="#" class="navigation__item-link-telephone">КОНТАКТЫ</a>
                             </li>
                         </ul>
@@ -58,25 +58,25 @@
                         <nav class="navigation">
                             <ul class="navigation__list">
                                 <li class="navigation__item">
-                                    <a href="#" class="navigation__item-link">О НАС</a>
+                                    <a href="#" class="navigation__item-link" data-scroll-to="1" >О НАС</a>
                                 </li>
                                 <li class="navigation__item">
-                                    <a href="#" class="navigation__item-link">БУРГЕРЫ</a>
+                                    <a href="#" class="navigation__item-link" data-scroll-to="2">БУРГЕРЫ</a>
                                 </li>
                                 <li class="navigation__item">
-                                    <a href="#" class="navigation__item-link">КОМАНДА</a>
+                                    <a href="#" class="navigation__item-link" data-scroll-to="3">КОМАНДА</a>
                                 </li>
                                 <li class="navigation__item">
-                                    <a href="#" class="navigation__item-link">МЕНЮ</a>
+                                    <a href="#" class="navigation__item-link" data-scroll-to="4">МЕНЮ</a>
                                 </li>
                                 <li class="navigation__item">
-                                    <a href="#" class="navigation__item-link">ОТЗЫВЫ</a>
+                                    <a href="#" class="navigation__item-link" data-scroll-to="5">ОТЗЫВЫ</a>
                                 </li>
                                 <li class="navigation__item">
-                                    <a href="#" class="navigation__item-link">КОНТАКТЫ</a>
+                                    <a href="#" class="navigation__item-link" data-scroll-to="7">КОНТАКТЫ</a>
                                 </li>
                             </ul>
-                            <button class="button button_orange" type="sumbit">
+                            <button class="button button_orange" type="sumbit" data-scroll-to="6">
                                 ЗАКАЗАТЬ
                             </button>
                             <div class="navigation__burger-menu-wrapper">
@@ -959,16 +959,17 @@
     </div>
     <aside class="navigation-bar">
         <ul class="navigation-bar__list">
-            <li class="navigation-bar__item"></li>
-            <li class="navigation-bar__item"></li>
-            <li class="navigation-bar__item"></li>
-            <li class="navigation-bar__item"></li>
-            <li class="navigation-bar__item"></li>
-            <li class="navigation-bar__item"></li>
-            <li class="navigation-bar__item"></li>
-            <li class="navigation-bar__item"></li>
+            <li class="navigation-bar__item active" data-scroll-to="0"></li>
+            <li class="navigation-bar__item" data-scroll-to="1"></li>
+            <li class="navigation-bar__item" data-scroll-to="2"></li>
+            <li class="navigation-bar__item" data-scroll-to="3"></li>
+            <li class="navigation-bar__item" data-scroll-to="4"></li>
+            <li class="navigation-bar__item" data-scroll-to="5"></li>
+            <li class="navigation-bar__item" data-scroll-to="6"></li>
+            <li class="navigation-bar__item" data-scroll-to="7"></li>
         </ul>
     </aside>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script>
         var overlayExit = document.querySelector(".navigation__exit-telephone");
         var telephoneMenu = document.querySelector(".navigation__menu-active__telephone");
@@ -1150,7 +1151,106 @@
             reviewsModal.style.display = "none";
         })
 
+        const sections = $(".section");
+        const display = $(".main");
+        let inScroll = false;
+
+        const setActiveMenuItem = itemEq => {
+        $('.navigation-bar__item').eq(itemEq).addClass('active')
+            .siblings().removeClass('active')
+        } 
+
+        const performTransition = sectionEq => {
+        const position = `${sectionEq * -100}%`;
+
+        if (inScroll) return;
+
+        inScroll = true;
+
+        sections
+            .eq(sectionEq)
+            .addClass("active")
+            .siblings()
+            .removeClass("active");
+
+        display.css({
+            transform: `translate(0, ${position})`,
+            "-webkit-transform": `translate(0, ${position})`
+        });
+
+        setTimeout(() => {
+            inScroll = false;
+            setActiveMenuItem(sectionEq);
+        }, 1300); // продолжительность анимации + 300ms - потому что закончится инерция
+        };
+
+        const scrollToSection = direction => {
+        const activeSection = sections.filter(".active");
+        const nextSection = activeSection.next();
+        const prevSection = activeSection.prev();
+
+        if (direction === "up" && prevSection.length) {
+            performTransition(prevSection.index());
+        }
+
+        if (direction === "down" && nextSection.length) {
+            performTransition(nextSection.index());
+        }
+        };
+
+        $(document).on({
+        wheel: e => {
+            const deltaY = e.originalEvent.deltaY;
+            const direction = deltaY > 0 ? "down" : "up";
+
+            scrollToSection(direction);
+        },
+        keydown: e => {
+            switch (e.keyCode) {
+                case 40:
+                scrollToSection("down");
+                break;
+
+                case 38:
+                scrollToSection("up");
+                break;
+            }
+        },
+        touchmove: e => e.preventDefault()
+});
+
+$('[data-scroll-to]').on('click', e => {
+  e.preventDefault();
+
+  const target = parseInt($(e.currentTarget).attr('data-scroll-to'));
+
+
+  performTransition(target);
+
+})
+
+if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+    var isMobile = true
+   }
+
+if (isMobile) {
+  $(document).swipe({
+    swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
+      /**
+       * плагин возвращает фактическое...
+       * ...
+       */
+      const scrollDirection = direction === 'down' ? 'up' : 'down';
+      
+      scrollToSection(scrollDirection);
+    }
+  });
+}
+
+
     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.3.6/mobile-detect.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.18/jquery.touchSwipe.min.js"></script>
 </body>
 
 </html>
