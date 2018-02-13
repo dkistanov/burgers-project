@@ -3,3 +3,16 @@ prepros-6.config
 js/domashka.js
 .vscode/launch.json
 js.html
+node_modules/jquery-touchswipe/package.json
+node_modules/jquery-touchswipe/README.md
+node_modules/jquery-touchswipe/README.md
+node_modules/jquery-touchswipe/LICENSE
+node_modules/jquery-touchswipe/jquery.touchSwipe.js
+package-lock.json
+node_modules/jquery-touchswipe/docs/tutorial-Trigger_handlers.html
+node_modules/jquery-touchswipe/docs/tutorial-Thresholds.html
+node_modules/jquery-touchswipe/docs/tutorial-Tap_vs_swipe.html
+node_modules/jquery-touchswipe/docs/tutorial-Swipe_status.html
+node_modules/jquery-touchswipe/docs/tutorial-Stop_propegation.html
+node_modules/jquery-touchswipe/docs/tutorial-Single_swipe.html
+node_modules/jquery-touchswipe/docs/tutorial-Pinch_status.html
