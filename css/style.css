@@ -1769,6 +1769,18 @@ input[type="radio"]:checked + .form__radio-title::after {
   .button_phones_add {
     display: block; } }
 
+@media screen and (max-width: 768px) {
+  .button_phones_delete {
+    padding: 0.5rem 0.8rem;
+  } 
+}
+
+@media screen and (max-width: 768px) {
+  .button_phones_add {
+    padding: 0.5rem 0.8rem;
+  } 
+}
+
 @media screen and (max-width: 480px) {
   .reviews-block__item-name {
     font-size: 2rem; } }

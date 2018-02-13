@@ -98,7 +98,7 @@
                             </span>
                         </div>
                     </div>
-                    <div class="arrow-scroll">
+                    <div class="arrow-scroll" data-scroll-to = "1">
                         <img src="img/content/arrow-scroll.png" alt="scroll" class="arrow-scroll__img">
                     </div>
                 </div>
@@ -1047,6 +1047,7 @@
     <script src="js/jquery.touchSwipe.min.js"></script>
     <script>
         var overlayExit = document.querySelector(".navigation__exit-telephone");
+        var telephoneMenuLink = document.querySelectorAll(".navigation__item-link-telephone")
         var telephoneMenu = document.querySelector(".navigation__menu-active__telephone");
         var sectionFirst = document.querySelector(".first-block");
         var overlayAdd = document.querySelector(".navigation__burger-menu-wrapper");
@@ -1057,6 +1058,16 @@
             telephoneMenu.style.opacity = "0";
             telephoneMenu.style.transition = "1s all";
         })
+
+        for (var i = 0; i < telephoneMenuLink.length; i++) {
+            telephoneMenuLink[i].addEventListener("click", function () {
+                telephoneMenu.style.left = "-100%";
+                telephoneMenu.style.opacity = "0";
+                telephoneMenu.style.transition = "1s all";
+            })
+        };
+
+
 
         overlayAdd.addEventListener("click", function () {
             telephoneMenu.style.left = "0";
