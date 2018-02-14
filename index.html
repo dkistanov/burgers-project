@@ -924,7 +924,7 @@
                     <h2 class="section__title title_margin title_center">
                         Закажите доставку
                     </h2>
-                    <form action="" class="delivery-block__form">
+                    <form action="server.php" method="POST" class="delivery-block__form" id="order-form">
                         <div class="delivery-block__left-content">
                             <label for="name" class="form__label">
                                 <span class="form__name">Имя</span>
@@ -1045,6 +1045,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/mobile-detect@1.4.1/mobile-detect.min.js"></script>
     <script src="js/jquery.touchSwipe.min.js"></script>
+    <script src="js/ajax.js"></script>
     <script>
         var overlayExit = document.querySelector(".navigation__exit-telephone");
         var telephoneMenuLink = document.querySelectorAll(".navigation__item-link-telephone")
@@ -1184,35 +1185,6 @@
             };
 
             if (isControl == false && isDash == false && isDigit == false) {
-                event.preventDefault();
-            };
-        });
-
-        floor.addEventListener('keydown', function (event) {
-            isDigit = false;
-            if (event.key >= 0 || event.key <= 9) {
-                isDigit = true;
-            };
-            if (isDigit == false) {
-                event.preventDefault();
-            };
-        });
-        housing.addEventListener('keydown', function (event) {
-            isDigit = false;
-            if (event.key >= 0 || event.key <= 9) {
-                isDigit = true;
-            };
-            if (isDigit == false) {
-                event.preventDefault();
-            };
-        });
-
-        apartment.addEventListener('keydown', function (event) {
-            isDigit = false;
-            if (event.key >= 0 || event.key <= 9) {
-                isDigit = true;
-            };
-            if (isDigit == false) {
                 event.preventDefault();
             };
         });
