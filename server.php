@@ -37,11 +37,11 @@
     </body>
     </html>';
 
-    $headers = "From: Администратор сайта <admin@loftschool.com>\r\n".
+    $headers = "From: Администратор сайта <kiba34@mail.ru>\r\n".
                 "MIME-Version: 1.0" . "\r\n" .
                 "Content-type: text/html; charset=UTF-8" . "\r\n";
 
-    $mail = mail('koval@loftschool.com', 'Заказ', $mail_message, $headers);
+    $mail = mail('kiba34@mail.ru', 'Заказ', $mail_message, $headers);
 
     $data = [];
 
@@ -52,7 +52,9 @@
         $data['status'] = "NO";
         $data['mes'] = "На сервере произошла ошибка";
     }
-
+    echo ($data);
+    echo ($mail_message);
+    echo ($headers);
     echo json_encode($data);
 
 ?>
