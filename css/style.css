@@ -992,7 +992,7 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
   -ms-flex-align: center;
   align-items: center;
   min-height: 58px;
-  z-index: 10;
+  z-index: 11;
 }
 
 .footer__content {
