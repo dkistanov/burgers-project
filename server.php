@@ -53,6 +53,7 @@
         $data['mes'] = "На сервере произошла ошибка";
     }
     echo ($data);
+<<<<<<< HEAD
     echo ($mail);
     echo ($headers);
     echo json_encode($data);
