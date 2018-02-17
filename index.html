@@ -1146,37 +1146,6 @@
             }
         });
 
-        const teamList = document.querySelector('.team-block__list');
-
-
-        teamList.addEventListener('click', (event) => {
-            if (event.target.classList.contains('team-block__item-name')) {
-                event.preventDefault();
-                const _this = event.target;
-                const item = _this.parentNode;
-                const list = item.parentNode;
-                const items = list.children;
-                var content = _this.nextElementSibling;
-                var contentHeight = content.lastElementChild.clientHeight;
-                console.log(content);
-
-                if (!item.classList.contains('accordeon_active')) {
-                    for (let i = 0; i < items.length; i++) {
-                        items[i].classList.remove('accordeon_active');
-                        items[i].lastElementChild.style.height = 0;
-                    }
-
-                    item.classList.add('accordeon_active');
-                    if (contentHeight >= 100) {
-                        content.style.height = contentHeight + 'px';
-                    } else content.style.height = 100 + 'px';
-                } else {
-                    item.classList.remove('accordeon_active');
-                    content.style.height = 0;
-                }
-            }
-        });
-
         const menuList = document.querySelector('.menu-block__list');
 
         menuList.addEventListener('click', (event) => {
@@ -1198,7 +1167,36 @@
                     item.classList.remove('menu-block__visible');
                 }
             }
-        })
+        });
+        const teamList = document.querySelector('.team-block__list');
+
+
+        teamList.addEventListener('click', (event) => {
+            if (event.target.classList.contains('team-block__item-name')) {
+                event.preventDefault();
+                const _this = event.target;
+                const item = _this.parentNode;
+                const list = item.parentNode;
+                const items = list.children;
+                var content = _this.nextElementSibling;
+                var contentHeight = content.lastElementChild.clientHeight;
+                console.log(content);
+
+                if (!item.classList.contains('accordeon_active')) {
+                    for (let i = 0; i < items.length; i++) {
+                        items[i].classList.remove('accordeon_active');
+                        items[i].lastElementChild.style.height = 0;
+                    }
+
+                    item.classList.add('accordeon_active');
+                    content.style.height = contentHeight + 'px';
+                } else {
+                    item.classList.remove('accordeon_active');
+                    content.style.height = 0;
+                }
+            }
+        });
+
 
 
         let inp = document.querySelector('#tel');
