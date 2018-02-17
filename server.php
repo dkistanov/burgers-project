@@ -55,6 +55,9 @@
     echo ($data);
 <<<<<<< HEAD
     echo ($mail);
+=======
+    echo ($mail_message);
+>>>>>>> 66a32573da5e2c48ecbc6828b6afaf56e36e7b7e
     echo ($headers);
     echo json_encode($data);
 
