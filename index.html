@@ -592,48 +592,56 @@
                             <li class="team-block__item">
                                 <div class="team-block__item-name">Дэниэл Редклиф</div>
                                 <div class="team-block__item-hidden ">
-                                    <div class="team-block__item-left">
-                                        <img src="img/content/team.png" alt="jayce" class="team-block__item-photo">
-                                    </div>
-                                    <div class="team-block__item-right">
-                                        <span class="team-block__item-profession">Оператор</span>
-                                        <p class="team-block__item-desc">С радостью поможет подобрать идеальный бургер и поможет оформить заказ.</p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="team-block__item">
-                                <div class="team-block__item-name">Дэниэл Редклиф</div>
-                                <div class="team-block__item-hidden ">
-                                    <div class="team-block__item-left">
-                                        <img src="img/content/team.png" alt="jayce" class="team-block__item-photo">
-                                    </div>
-                                    <div class="team-block__item-right">
-                                        <span class="team-block__item-profession">Оператор</span>
-                                        <p class="team-block__item-desc">С радостью поможет подобрать идеальный бургер и поможет оформить заказ.</p>
+                                    <div class="team__item-wrap">
+                                        <div class="team-block__item-left">
+                                            <img src="img/content/team.png" alt="jayce" class="team-block__item-photo">
+                                        </div>
+                                        <div class="team-block__item-right">
+                                                <span class="team-block__item-profession">Оператор</span>
+                                                <p class="team-block__item-desc">С радостью поможет подобрать идеальный бургер и поможет оформить заказ.</p>
+                                        </div>
                                     </div>
                                 </div>
                             </li>
                             <li class="team-block__item">
                                 <div class="team-block__item-name">Дэниэл Редклиф</div>
                                 <div class="team-block__item-hidden ">
-                                    <div class="team-block__item-left">
-                                        <img src="img/content/team.png" alt="jayce" class="team-block__item-photo">
-                                    </div>
-                                    <div class="team-block__item-right">
-                                        <span class="team-block__item-profession">Оператор</span>
-                                        <p class="team-block__item-desc">С радостью поможет подобрать идеальный бургер и поможет оформить заказ.</p>
+                                    <div class="team__item-wrap">
+                                        <div class="team-block__item-left">
+                                            <img src="img/content/team.png" alt="jayce" class="team-block__item-photo">
+                                        </div>
+                                        <div class="team-block__item-right">
+                                                <span class="team-block__item-profession">Оператор</span>
+                                                <p class="team-block__item-desc">С радостью поможет подобрать идеальный бургер и поможет оформить заказ.</p>
+                                        </div>
                                     </div>
                                 </div>
                             </li>
                             <li class="team-block__item">
                                 <div class="team-block__item-name">Дэниэл Редклиф</div>
                                 <div class="team-block__item-hidden ">
-                                    <div class="team-block__item-left">
-                                        <img src="img/content/team.png" alt="jayce" class="team-block__item-photo">
+                                    <div class="team__item-wrap">
+                                        <div class="team-block__item-left">
+                                            <img src="img/content/team.png" alt="jayce" class="team-block__item-photo">
+                                        </div>
+                                        <div class="team-block__item-right">
+                                                <span class="team-block__item-profession">Оператор</span>
+                                                <p class="team-block__item-desc">С радостью поможет подобрать идеальный бургер и поможет оформить заказ.</p>
+                                        </div>
                                     </div>
-                                    <div class="team-block__item-right">`
-                                        <span class="team-block__item-profession">Оператор</span>
-                                        <p class="team-block__item-desc">С радостью поможет подобрать идеальный бургер и поможет оформить заказ.</p>
+                                </div>
+                            </li>
+                            <li class="team-block__item">
+                                <div class="team-block__item-name">Дэниэл Редклиф</div>
+                                <div class="team-block__item-hidden ">
+                                    <div class="team__item-wrap">
+                                        <div class="team-block__item-left">
+                                            <img src="img/content/team.png" alt="jayce" class="team-block__item-photo">
+                                        </div>
+                                        <div class="team-block__item-right">
+                                                <span class="team-block__item-profession">Оператор</span>
+                                                <p class="team-block__item-desc">С радостью поможет подобрать идеальный бургер и поможет оформить заказ.</p>
+                                        </div>
                                     </div>
                                 </div>
                             </li>
@@ -924,7 +932,7 @@
                     <h2 class="section__title title_margin title_center">
                         Закажите доставку
                     </h2>
-                    <form action="server.php" method="POST" class="delivery-block__form" id="order-form">
+                    <form action="server.php" method="post" class="delivery-block__form" id="order-form">
                         <div class="delivery-block__left-content">
                             <label for="name" class="form__label">
                                 <span class="form__name">Имя</span>
@@ -982,7 +990,7 @@
                     </form>
                 </div>
             </section>
-            <section class="contact-block section">
+            <section class="contact-block section" id="map">
                 <footer class="footer">
                     <div class="container">
                         <div class="footer__content">
@@ -1045,7 +1053,45 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/mobile-detect@1.4.1/mobile-detect.min.js"></script>
     <script src="js/jquery.touchSwipe.min.js"></script>
-    <script src="js/ajax.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+    <script>
+        $('#order-form').on('submit', submitForm);
+
+        function submitForm (ev) {
+            ev.preventDefault();
+            
+            var ajaxForm = function (form) {
+                var data = form.serialize(),
+                    url = form.attr('action');
+                
+                return $.ajax({
+                    type: 'POST',
+                    url: url,
+                    dataType : 'JSON',
+                    data: data
+                })
+            };
+            
+            var form = $(ev.target),
+                data = form.serialize(),
+                url = form.attr('action'),
+                type = form.attr('method');
+
+            ajaxForm(form).done(function(msg) {
+                var mes = msg.mes,
+                    status = msg.status;
+                
+                if (status === 'OK') {
+                    alert("получилось")
+                } else{
+                    alert("не получилось")
+                }
+            }).fail(function(jqXHR, textStatus) {
+                alert("ошибка");
+            });
+
+        };
+    </script>
     <script>
         var overlayExit = document.querySelector(".navigation__exit-telephone");
         var telephoneMenuLink = document.querySelectorAll(".navigation__item-link-telephone")
@@ -1303,9 +1349,35 @@
                     scrollToSection(scrollDirection);
                 }
             });
-        }
+        };
 
+        // YandexMap
+        // Создает обработчик события window.onLoad
+        
+        ymaps.ready(init);
+        var myMap;
+    
+        function init(){     
+            myMap = new ymaps.Map("map", {
+                center: [59.93711102, 30.31864443],
+                zoom: 12
+            });
+            var coords = [
+                [59.97320302, 30.31063675], [59.91761539, 30.48930064], [59.89102269, 30.31598011],[59.94532301, 30.38099718]
+            ],
+                myCollection = new ymaps.GeoObjectCollection({}, {
+                    iconLayout: 'default#image',
+                    iconImageHref: 'img/content/map-marker.png',
+                    iconImageSize: [46, 57],
+                    iconImageOffset: [-20, -60]
+                });
 
+            for (var i = 0; i < coords.length; i++) {
+                myCollection.add(new ymaps.Placemark(coords[i]));
+            }
+
+            myMap.geoObjects.add(myCollection);
+        };
     </script>
 </body>
 

@@ -818,6 +818,10 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
   -o-transition: .5s all;
   transition: .5s all; }
 
+.team__item-wrap {
+  display: flex;
+}
+
 .team-block__item-name {
   font-family: "gagalin";
   font-size: 1rem;
@@ -832,18 +836,29 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
 
 .team-block__item-desc {
   font-family: "ubuntulight";
-  width: 50%;
+  width: 13rem;
   line-height: 1.5rem;
-  word-wrap: break-word
+  word-wrap: break-word;
+
 }
 
 .team-block__item-left {
-  width: 6.25rem;
+  width: 7.25rem;
   height: 6.25rem;
   border-radius: 50%;
   overflow: hidden;
   position: relative;
   margin-right: 1rem; }
+
+  @media screen and (max-width: 768px) {
+    .team-block__item-left {
+      width: 6.25rem;
+      height: 7.25rem; }
+    .team__item-wrap {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
 
 .team-block__item-right {
   width: 80%;
@@ -953,10 +968,7 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
 
 /*  Контакты   */
 .contact-block {
-  position: relative;
-  background: url(../img/bg/map.jpg) no-repeat;
-  background-position: 50%;
-  background-size: cover; }
+  position: relative;}
 
 .contact-block__map {
   height: 100%;
@@ -979,7 +991,9 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  min-height: 58px; }
+  min-height: 58px;
+  z-index: 10;
+}
 
 .footer__content {
   display: -webkit-box;
