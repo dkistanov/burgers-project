@@ -661,7 +661,7 @@
                                 <h3 class="menu-block__item-rotate">Для мясоедов</h3>
                             </div>
                             <div class="menu-block__item-wrapper">
-                                <div class="reviews-block__modal-exit menu"></div>
+                                <div class="menu-block__exit x menu"></div>
                                 <p class="menu-block__desc">
                                     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem dolorum eum odit itaque sit ea maxime reprehenderit incidunt
                                     sapiente corrupti molestiae porro, minima aspernatur expedita ut reiciendis ipsam nobis
@@ -687,7 +687,7 @@
                                 <h3 class="menu-block__item-rotate">Вегетарианское</h3>
                             </div>
                             <div class="menu-block__item-wrapper">
-                                <div class="reviews-block__modal-exit menu"></div>
+                                <div class="menu-block__exit x menu"></div>
                                 <p class="menu-block__desc">
                                     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem dolorum eum odit itaque sit ea maxime reprehenderit incidunt
                                     sapiente corrupti molestiae porro, minima aspernatur expedita ut reiciendis ipsam nobis
@@ -713,7 +713,7 @@
                                 <h3 class="menu-block__item-rotate">Диетическое</h3>
                             </div>
                             <div class="menu-block__item-wrapper">
-                                <div class="reviews-block__modal-exit menu"></div>
+                                <div class="menu-block__exit x menu"></div>
                                 <p class="menu-block__desc">
                                     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem dolorum eum odit itaque sit ea maxime reprehenderit incidunt
                                     sapiente corrupti molestiae porro, minima aspernatur expedita ut reiciendis ipsam nobis
@@ -919,7 +919,7 @@
                 <div class="reviews-block__modal">
                     <div class="reviews-block__modal-content">
                         <span class="reviews-block__modal-name">Lorem, ipsum </span>
-                        <div class="reviews-block__modal-exit"></div>
+                        <div class="reviews-block__modal-exit x"></div>
                         <p class="reviews-block__modal-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates sequi voluptatum excepturi ex
                             vitae hic temporibus voluptatibus dicta, porro ad eligendi magnam at impedit quis quaerat harum.
                             Error, sed dolores! Quaerat repellat, fugit recusandae vero debitis laudantium! Nisi facere totam
@@ -1148,20 +1148,6 @@
                 items.style.right = currentRight + "%";
             }
         });
-
-        const menuItem = document.querySelectorAll('.menu-block__item');
-
-        const menuExit = document.querySelector('.menu');
-
-        menuExit.addEventListener("click", function () {
-            for(var i = 0; i<=menuItem.length; i++) {
-                menuItem[i].classList.remove('menu-block__visible');
-            }
-        })
-
-
-
-
         const menuList = document.querySelector('.menu-block__list');
 
         menuList.addEventListener('click', (event) => {
@@ -1173,6 +1159,21 @@
                 const items = list.children;
                 const content = _this.nextElementSibling;
 
+                // const menuExitToggle = document.qu
+
+                // _this.addEventListener("click", function() {
+                //     menuExit.classList.toggle('menu-block__exit')
+                // })
+                const menuItem = document.querySelectorAll('.menu-block__item');    
+                const menuExit = document.querySelectorAll('.menu-block__exit');
+                for (let q = 0; q < items.length; q++) {
+                    menuExit[q].addEventListener("click", function () {
+                        for(let i = 0; i<=menuItem.length; i++) {
+                            menuItem[i].classList.remove('menu-block__visible');
+                        }
+                    })
+                }
+
                 if (!item.classList.contains('menu-block__visible')) {
                     for (let i = 0; i < items.length; i++) {
                         items[i].classList.remove('menu-block__visible');
@@ -1183,6 +1184,7 @@
                     item.classList.remove('menu-block__visible');
                 }
             }
+
         });
 
         const teamList = document.querySelector('.team-block__list');
