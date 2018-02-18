@@ -1703,7 +1703,8 @@ input[type="radio"]:checked + .form__radio-title::after {
 }
 @media screen and (max-width: 768px) {
   .menu-block__desc {
-    min-width: 35rem;
+    min-width: 20rem;
+    font-size: 0.9rem;
   }
 }
 @media screen and (max-width: 768px) {
@@ -1714,7 +1715,8 @@ input[type="radio"]:checked + .form__radio-title::after {
   } }
 @media screen and (max-width: 768px) {
   .menu-block__item.menu-block__visible .menu-block__item-wrapper .menu-block__desc{
-    min-width: 30rem;
+    min-width: 20rem;
+
   } }
 @media screen and (max-width: 768px) {
   .reviews-block__item {
@@ -2059,18 +2061,16 @@ input[type="radio"]:checked + .form__radio-title::after {
     transition: 1s all;
   }
 
-  .menu-block__visible .menu-block__item-wrapper {
-    min-width: 20rem;
-  }
-
   .menu-block__desc {
-    padding-top: 8rem;
-    padding-left: 3rem;
-    padding-right: 3rem;
+    padding-top: 4rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    font-size: 0.8rem;
+    min-width: 100%;
   }
   .menu-block__visible .menu-block__item-wrapper .menu-block__exit {
     display: block;
-    top: 6rem;
+    top: 2rem;
     right: 1.5rem;
     z-index: 1000;
   }
