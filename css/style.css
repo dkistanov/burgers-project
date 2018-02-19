@@ -1026,6 +1026,20 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
 .footer__socials {
   text-align: right; }
 
+.footer__socials-list {
+  display: flex;
+  list-style-type: none;
+  justify-content: flex-end;
+}
+
+.footer__socials-item {
+  margin-right: 1rem;
+}
+
+.footer__socials-item:last-child {
+  margin-right: 0rem;
+}
+
 .footer__address {
   font-style: normal;
   font-family: "ubuntulight";
@@ -1052,19 +1066,17 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
 .footer__socials-link {
   text-decoration: none;
   width: 20px;
-  height: 20px; }
+  height: 20px;
+  display: block;
+}
 
 .social__svg {
   width: 1.25rem;
   height: 1.25rem;
   fill: #525252;
-  margin-left: 1.25rem;
   -webkit-transition: .5s all;
   -o-transition: .5s all;
   transition: .5s all; }
-
-.footer__socials-link:nth-child(1) .social__svg {
-  margin: 0; }
 
 .footer__socials-link:hover .social__svg {
   fill: #fff; }
@@ -1901,8 +1913,8 @@ input[type="radio"]:checked + .form__radio-title::after {
     align-items: center; } }
 
 @media screen and (max-width: 480px) {
-  .footer__socials {
-    text-align: center; } }
+  .footer__socials-list {
+    justify-content: center } }
 
 @media screen and (max-width: 480px) {
   .footer__address {
