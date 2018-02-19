@@ -1824,6 +1824,14 @@ input[type="radio"]:checked + .form__radio-title::after {
     font-size: 0.75rem; } }
 
 @media screen and (max-width: 768px) {
+  .form__error{
+    top: 1.38rem } }
+
+@media screen and (max-width: 480px) {
+  .form__error{
+    top: 1.33rem } }
+
+@media screen and (max-width: 768px) {
   .form__label {
     margin-bottom: 0.9rem; } }
 
