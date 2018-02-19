@@ -98,7 +98,7 @@
                             </span>
                         </div>
                     </div>
-                    <div class="arrow-scroll" data-scroll-to = "1">
+                    <div class="arrow-scroll" data-scroll-to="1">
                         <img src="img/content/arrow-scroll.png" alt="scroll" class="arrow-scroll__img">
                     </div>
                 </div>
@@ -597,8 +597,8 @@
                                             <img src="img/content/team.png" alt="jayce" class="team-block__item-photo">
                                         </div>
                                         <div class="team-block__item-right">
-                                                <span class="team-block__item-profession">Оператор</span>
-                                                <p class="team-block__item-desc">С радостью поможет подобрать идеальный бургер и поможет оформить заказ.</p>
+                                            <span class="team-block__item-profession">Оператор</span>
+                                            <p class="team-block__item-desc">С радостью поможет подобрать идеальный бургер и поможет оформить заказ.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -611,8 +611,8 @@
                                             <img src="img/content/team.png" alt="jayce" class="team-block__item-photo">
                                         </div>
                                         <div class="team-block__item-right">
-                                                <span class="team-block__item-profession">Оператор</span>
-                                                <p class="team-block__item-desc">С радостью поможет подобрать идеальный бургер и поможет оформить заказ.</p>
+                                            <span class="team-block__item-profession">Оператор</span>
+                                            <p class="team-block__item-desc">С радостью поможет подобрать идеальный бургер и поможет оформить заказ.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -625,8 +625,8 @@
                                             <img src="img/content/team.png" alt="jayce" class="team-block__item-photo">
                                         </div>
                                         <div class="team-block__item-right">
-                                                <span class="team-block__item-profession">Оператор</span>
-                                                <p class="team-block__item-desc">С радостью поможет подобрать идеальный бургер и поможет оформить заказ.</p>
+                                            <span class="team-block__item-profession">Оператор</span>
+                                            <p class="team-block__item-desc">С радостью поможет подобрать идеальный бургер и поможет оформить заказ.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -639,8 +639,8 @@
                                             <img src="img/content/team.png" alt="jayce" class="team-block__item-photo">
                                         </div>
                                         <div class="team-block__item-right">
-                                                <span class="team-block__item-profession">Оператор</span>
-                                                <p class="team-block__item-desc">С радостью поможет подобрать идеальный бургер и поможет оформить заказ.</p>
+                                            <span class="team-block__item-profession">Оператор</span>
+                                            <p class="team-block__item-desc">С радостью поможет подобрать идеальный бургер и поможет оформить заказ.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -924,31 +924,38 @@
                         <div class="delivery-block__left-content">
                             <label for="name" class="form__label">
                                 <span class="form__name">Имя</span>
-                                <input type="text" class="form__input" placeholder="Даниил" name="name" id="name">
+                                <div class="error">Ошибка!</div>
+                                <input type="text" class="form__input" placeholder="Даниил" name="name" id="name" data-valid="2">
                             </label>
                             <label for="tel" class="form__label">
                                 <span class="form__name">Телефон</span>
-                                <input type="text" class="form__input" placeholder="+7(123)456-78-90" name="tel" id="tel" maxlength="16">
+                                <div class="error">Ошибка!</div>
+                                <input type="text" class="form__input" placeholder="+7(123)456-78-90" name="tel" id="tel" maxlength="16" data-valid="14">
                             </label>
                             <label for="street" class="form__label full_width">
                                 <span class="form__name">Улица</span>
-                                <input type="text" class="form__input" placeholder="Улица им.Ленина" name="street" id="street">
+                                <div class="error">Ошибка!</div>
+                                <input type="text" class="form__input" placeholder="Улица им.Ленина" name="street" id="street" data-valid="1">
                             </label>
                             <label for="house" class="form__label house_desc">
                                 <span class="form__name">Дом</span>
-                                <input type="text" class="form__input" placeholder="136а" name="house" id="house">
+                                <div class="error">Ошибка!</div>
+                                <input type="text" class="form__input" placeholder="136а" name="house" id="house" data-valid="2" data-valid="1">
                             </label>
                             <label for="housing" class="form__label house_desc">
                                 <span class="form__name">Корпус</span>
-                                <input type="text" class="form__input" placeholder="2" name="housing" id="housing" maxlength="2">
+                                <div class="error">Ошибка!</div>
+                                <input type="text" class="form__input" placeholder="2" name="housing" id="housing" maxlength="2" data-valid="2" data-valid="1">
                             </label>
                             <label for="apartment" class="form__label house_desc">
                                 <span class="form__name">Квартира</span>
-                                <input type="text" class="form__input" placeholder="321" name="apartment" id="apartment" maxlength="3">
+                                <div class="error">Ошибка!</div>
+                                <input type="text" class="form__input" placeholder="321" name="apartment" id="apartment" maxlength="3" data-valid="2" data-valid="1">
                             </label>
                             <label for="floor" class="form__label house_desc floor_phones_delete">
                                 <span class="form__name">Этаж</span>
-                                <input type="text" class="form__input" placeholder="4" name="floor" id="floor" maxlength="2">
+                                <div class="error">Ошибка!</div>
+                                <input type="text" class="form__input" placeholder="4" name="floor" id="floor" maxlength="2" data-valid="1">
                             </label>
                         </div>
                         <div class="delivery-block__right-content">
@@ -976,6 +983,18 @@
                             </label>
                         </div>
                     </form>
+                </div>
+                <div class="form-modal yes">
+                    <div class="form-modal__content">
+                        <span class="form-modal__text">Сообщение отправлено</span>
+                        <button class="button button_orange">закрыть</button>
+                    </div>
+                </div>
+                <div class="form-modal no">
+                    <div class="form-modal__content">
+                        <span class="form-modal__text">Произошла ошибка</span>
+                        <button class="button button_orange">закрыть</button>
+                    </div>
                 </div>
             </section>
             <section class="contact-block section" id="map">
@@ -1055,36 +1074,36 @@
     <script>
         $('#order-form').on('submit', submitForm);
 
-        function submitForm (ev) {
+        function submitForm(ev) {
             ev.preventDefault();
-            
+
             var ajaxForm = function (form) {
                 var data = form.serialize(),
                     url = form.attr('action');
-                
+
                 return $.ajax({
                     type: 'POST',
                     url: url,
-                    dataType : 'JSON',
+                    dataType: 'JSON',
                     data: data
                 })
             };
-            
+
             var form = $(ev.target),
                 data = form.serialize(),
                 url = form.attr('action'),
                 type = form.attr('method');
 
-            ajaxForm(form).done(function(msg) {
+            ajaxForm(form).done(function (msg) {
                 var mes = msg.mes,
                     status = msg.status;
-                
+
                 if (status === 'OK') {
                     alert("получилось")
-                } else{
+                } else {
                     alert("не получилось")
                 }
-            }).fail(function(jqXHR, textStatus) {
+            }).fail(function (jqXHR, textStatus) {
                 alert("ошибка");
             });
 
@@ -1159,11 +1178,11 @@
                 // _this.addEventListener("click", function() {
                 //     menuExit.classList.toggle('menu-block__exit')
                 // })
-                const menuItem = document.querySelectorAll('.menu-block__item');    
+                const menuItem = document.querySelectorAll('.menu-block__item');
                 const menuExit = document.querySelectorAll('.menu-block__exit');
                 for (let q = 0; q < items.length; q++) {
                     menuExit[q].addEventListener("click", function () {
-                        for(let i = 0; i<=menuItem.length; i++) {
+                        for (let i = 0; i <= menuItem.length; i++) {
                             menuItem[i].classList.remove('menu-block__visible');
                         }
                     })
@@ -1365,17 +1384,27 @@
 
         // YandexMap
         // Создает обработчик события window.onLoad
-        
+
         ymaps.ready(init);
         var myMap;
-    
-        function init(){     
+
+        var zm = 12;
+
+        if (window.innerWidth <= 768) {
+            zm = 11
+        }
+
+        if (window.innerWidth <= 480) {
+            zm = 10
+        }
+
+        function init() {
             myMap = new ymaps.Map("map", {
                 center: [59.93711102, 30.31864443],
-                zoom: 12
+                zoom: zm
             });
             var coords = [
-                [59.97320302, 30.31063675], [59.91761539, 30.48930064], [59.89102269, 30.31598011],[59.94532301, 30.38099718]
+                [59.97320302, 30.31063675], [59.91761539, 30.48930064], [59.89102269, 30.31598011], [59.94532301, 30.38099718]
             ],
                 myCollection = new ymaps.GeoObjectCollection({}, {
                     iconLayout: 'default#image',
@@ -1401,6 +1430,119 @@
             myMap.controls.remove('typeSelector');
             myMap.behaviors.disable('scrollZoom');
         };
+
+        //-----------validation-------------------
+        var submitForm = (function(){
+            var URL = null;
+            function init(selector, url){
+                URL = url;
+                _addListeners(selector);
+            }
+
+        function _addListeners(selector){
+                document.querySelector(selector).addEventListener('submit', _hendlerSubmit);
+            }
+
+        function _hendlerSubmit(event){
+            event.preventDefault();
+            _ajaxForm(URL, this);
+        }
+
+        function _ajaxForm(url, form){
+            if(!validate.validation(form)) return;
+
+            var doc = document;
+            var name = doc.querySelector('input[name="name"]').value;
+            var phone = doc.querySelector('input[name="tel"]').value;
+            var data = `name=${name}&phone=${phone}`;
+            var xhr = new XMLHttpRequest();
+
+            xhr.open('POST', url);
+            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+            xhr.send(data);
+            
+            xhr.onreadystatechange = function(){
+                if(xhr.readyState === 4){
+                    var response = JSON.parse(xhr.responseText);
+                }
+            }
+        }
+
+            return {
+                submit: init,
+            }
+        })();
+
+        var validate = (function(){
+
+            function _addListeners(form){
+                var formInputs = form.querySelectorAll('.form__input');
+
+                formInputs.forEach(function(input){
+                    input.addEventListener('focus', _removeError);
+                });
+
+                form.addEventListener('reset', _resetForm);
+            }
+
+            function _resetForm(){
+                var errors = this.querySelectorAll('.form__error');
+
+                errors.forEach(function(error){
+                    error.classList.remove('form__error');
+                });
+            }
+
+            function _removeError(){
+                this.previousElementSibling.classList.remove('form__error');
+            }
+
+            function _addError(input){
+                input.previousElementSibling.classList.add('form__error');
+            }
+
+            function validForm(form){
+                var valid = true;
+                var inputs = document.querySelectorAll('[data-valid]');
+
+                inputs.forEach(function(input){
+                    if(input.value.length < input.dataset.valid){
+                        _addError(input);
+                        valid = false;
+                    } else {
+                        var formModal = document.querySelector('.yes');
+                        formModal.style.display = "flex"
+                    } 
+                });
+
+                if(!valid){
+                    _addListeners(form);
+                }
+            
+                return valid;
+            }
+
+
+            return {
+                validation: validForm
+            }
+        })();
+
+        var formModalText = document.querySelectorAll('.form-modal__text');
+        formModalText.forEach(function(text){
+            var buttonFormExit = text.nextElementSibling; 
+            var formModal = document.querySelector('.yes');
+            buttonFormExit.addEventListener('click', function(){
+                formModal.style.display = "none";
+            })
+        })
+
+
+        if(document.querySelector('#order-form')){
+            submitForm.submit('#order-form', '/mail.php');
+        }
+
+
     </script>
 </body>
 

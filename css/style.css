@@ -1088,6 +1088,7 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
 .delivery-block {
   background: url(../img/bg/bgdilevery.jpg) no-repeat;
   background-size: cover;
+  position: relative;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-flow: column nowrap;
@@ -1143,6 +1144,7 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
 .form__label {
   display: -webkit-box;
   display: -ms-flexbox;
+  position: relative;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -1153,6 +1155,55 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
 
 .form__name {
   margin-bottom: 0.5rem; }
+
+/* form-submit */
+
+.error {
+  display: none;
+}
+
+.form__error {
+  position: absolute;
+  top: 1.62rem;
+  height: 1.6rem;
+  width: 100%;
+  background-color: #e45028;
+  text-align: center;
+  padding-top: 0.4rem;
+  border-radius: 3px;
+  display: block;
+}
+
+.form-modal {
+  position: absolute; 
+  background-color: rgba(0, 0, 0, 0.85);
+  height: 100%; 
+  width: 100%;
+  top:0;
+  left: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+} 
+
+.form-modal__content {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  width: 12.5rem;
+  height: 6.25rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+}
+
+.form-modal__text {
+  display: block;
+  margin-bottom: 1rem;
+  color: #000;
+  font-family: "ubunturegular"
+}
+
 
 .form__input {
   width: 100%;
